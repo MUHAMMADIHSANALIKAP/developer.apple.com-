@@ -1,0 +1,995 @@
+
+
+<!doctype html>
+<html id="html" lang="en">
+<head><title>
+	BscScan Login Page
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><meta name="format-detection" content="telephone=no" />
+<link rel="shortcut icon" href="/assets/generic/html/favicon.ico" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PQY6J2Q8EP"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config','G-PQY6J2Q8EP', { 'anonymize_ip': true });
+    </script>
+<script>
+        //Search box text ad
+        var availableAd = [];
+        var gotAd = [];
+
+        
+        availableAd = [];
+        gotAd = ["ShowAds					"];
+        
+    </script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/all.min.css?v=24.8.2.0">
+<link rel="stylesheet" href="/assets/vendor/autocomplete/dist/css/autocomplete.min.css?v=24.8.2.0" />
+<link rel="stylesheet" href="/assets/css/theme.min.css?v=24.8.2.0">
+<link rel="stylesheet" href="/assets/bsc/css/bscscan.min.css?v=24.8.2.0">
+<link rel="stylesheet" href="/assets/css/custom.css?v=24.8.2.0">
+<script src="/assets/vendor/jquery/dist/jquery.min.js?v=24.8.2.0"></script>
+<script type="text/javascript" src="/jss/blockies.js?v=24.8.2.0"></script>
+<script type="text/javascript" src="/assets/js/theme-appearance.js?v=24.8.2.0"></script>
+<style>
+        .autolink-safari a {
+            pointer-events: none !important;
+            text-decoration: none !important;
+            color: inherit !important;
+        }
+
+        #masterNoticeBar div.alert a{
+            color:#fff !important; 
+            text-decoration: underline !important;
+        }
+
+
+    </style>
+<style> .drmnfmj227m { -ms-flex-pack: center; justify-content: center; } .aqmsnryzxsw { border-top: 1px solid #e7eaf3 !important; } body.dark-mode .aqmsnryzxsw { border-color: #18365b !important; } @media (min-width: 992px) { .bbcgbaut1bc { display: block !important; } } @media (min-width: 992px) { .cbiftg1wsxq { display: inline-block !important; } }  </style>
+<script src="//www.recaptcha.net/recaptcha/api.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body id="body" class="d-flex flex-column min-vh-100">
+<section id="masterNoticeBar">
+
+
+</section>
+
+<section id="masterTopBar" class="sticky-top bg-white border-bottom py-2 d-print-none">
+<div class="container-xxl d-flex align-items-center justify-content-between">
+<div id="ethPrice" class="d-none d-md-flex align-items-center gap-4 w-100 fs-sm">
+<div class="text-muted"><span class="text-muted">BNB Price:</span> <a href="/chart/bnbprice">$537.76</a><span data-bs-toggle="tooltip" data-bs-placement="top" title="Changes in the last 24 hours"><span class="text-success"> (+3.09%)</span></span></div><div class="text-muted d-none d-lg-block"><i class="fad fa-gas-pump me-1"></i> Gas: <span id="spanGasTooltip" data-bs-toggle="tooltip" data-bs-html="true"><a href="/gastracker"><span class="gasPricePlaceHolder">1</span> GWei</a></span></div>
+</div>
+<div class="d-flex justify-content-end align-items-center gap-2 w-100">
+<div id="frmMaster" class="search-panel-container flex-grow-1 position-relative" style="width: 30rem;">
+<form action="/search" method="GET" autocomplete="off" spellcheck="false" class="auto-search-max-height">
+<span class="d-flex align-items-center position-absolute top-0 bottom-0" title="Search" style="left: 0.75rem;">
+<i class="fa-regular fa-search fs-5 text-secondary"></i>
+</span>
+<input type="text" class="form-control form-control-lg bg-light bg-focus-white pe-20" autocomplete="off" spellcheck="false" id="search-panel" name="q" placeholder="Search by Address / Txn Hash / Block / Token / Domain Name" aria-describedby="button-header-search" onkeyup="handleSearchText(this);" maxlength="68" style="padding-left: 2.375rem;" />
+<a href="javascript:;" class="clear-icon d-none align-items-center position-absolute top-0 bottom-0 my-auto d-flex align-items-center" style="right: 3.375rem; cursor:pointer;">
+<i class="fa-regular fa-xmark fs-5 text-secondary"></i>
+</a>
+<a href="javascript:;" class="search-icon d-none btn btn-sm btn-white my-1.5 align-items-center position-absolute top-0 bottom-0 d-flex align-items-center" style="right: 0.75rem; cursor:pointer;">
+<i class="fa-regular fa-arrow-turn-down-left text-secondary"></i>
+</a>
+<input type="hidden" value id="hdnSearchText" />
+<input type="hidden" value id="hdnSearchLabel" />
+<input id="hdnIsTestNet" value="False" type="hidden" />
+<span class="shortcut-slash-icon align-items-center position-absolute top-0 bottom-0 align-items-center d-none d-sm-flex" title="Search" style="right: 0.5rem;">
+<kbd class="bg-dark bg-opacity-25 fw-semibold px-2 py-0.5 text-white">/</kbd>
+</span>
+</form>
+</div>
+<div id="divThemeSetting" class="dropdown d-none d-lg-block">
+<button class="btn btn-lg btn-white text-primary content-center" type="button" id="dropdownMenuTopbarSettings" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" style="width: 2.375rem; height: 2.375rem;">
+<span class="theme-btn-main"><i class="far fa-sun-bright theme-icon-active" data-href="#fa-sun-bright"></i></span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuTopbarSettings">
+<li>
+<button type="button" class="dropdown-item theme-btn active" data-bs-theme-value="light" onclick="setThemeMode('light');">
+<i class="far fa-sun-bright fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-sun-bright"></i> Light
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item theme-btn" data-bs-theme-value="dim" onclick="setThemeMode('dim');">
+<i class="far fa-moon-stars fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-moon-stars"></i> Dim
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item theme-btn" data-bs-theme-value="dark" onclick="setThemeMode('dark');">
+<i class="far fa-moon fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-moon"></i> Dark
+</button>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a class="dropdown-item" href="/settings">
+<i class="far fa-gear fa-fw dropdown-item-icon me-1"></i> Site Settings <i class="far fa-arrow-right ms-1"></i>
+</a>
+</li>
+</ul>
+</div>
+<div id="divTestNet" class="dropdown d-none d-lg-block">
+<button class="btn btn-lg btn-white content-center p-0" type="button" id="dropdownTopbarNetworks" data-bs-toggle="dropdown" aria-expanded="false" style="width: 2.375rem; height: 2.375rem;">
+<img width="18" data-img-theme="light" src="/assets/bsc/images/svg/logos/chain-light.svg?v=24.8.2.0" alt="BNB Smart Chain Logo">
+<img width="18" data-img-theme="dim" src="/assets/bsc/images/svg/logos/chain-dim.svg?v=24.8.2.0" alt="BNB Smart Chain Logo">
+<img width="18" data-img-theme="dark" src="/assets/bsc/images/svg/logos/chain-dark.svg?v=24.8.2.0" alt="BNB Smart Chain Logo">
+</button>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownTopbarNetworks">
+<li><a class="dropdown-item active" href="https://bscscan.com">Bsc Mainnet</a></li><li><a class="dropdown-item" href="https://opbnb.bscscan.com">opBNB Mainnet</a></li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li><a class="dropdown-item" href="https://testnet.bscscan.com">Bsc Testnet</a></li><li><a class="dropdown-item" href="https://opbnb-testnet.bscscan.com">opBNB Testnet</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+
+<header id="masterHeader" class="header border-bottom d-print-none">
+<nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0">
+<div class="container-xxl position-relative">
+<a class="navbar-brand" href="/" target="_parent" aria-label="BscScan">
+<img width="135" data-img-theme="light" src="/assets/bsc/images/svg/logos/logo-light.svg?v=24.8.2.0" alt="BscScan Logo">
+<img width="135" data-img-theme="dim" src="/assets/bsc/images/svg/logos/logo-dim.svg?v=24.8.2.0" alt="BscScan Logo">
+<img width="135" data-img-theme="dark" src="/assets/bsc/images/svg/logos/logo-dark.svg?v=24.8.2.0" alt="BscScan Logo">
+</a>
+<div class="d-flex align-items-center gap-4">
+<a class="link-dark d-block d-lg-none" href="/login">
+<i class="far fa-user-circle me-1"></i> Sign In
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+</div>
+<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+<ul class="navbar-nav gap-1 gap-lg-0 pt-4 pt-lg-0">
+<li class="nav-item">
+<a href="/" id="LI_default" class="nav-link" aria-current="page">
+Home
+</a>
+</li>
+
+<li class="nav-item dropdown">
+<a href="javascript:;" id="LI_blockchain" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blockchain</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<a href="/txs" id="LI12" class="dropdown-item">
+Transactions
+</a>
+</li>
+<li>
+<a href="/txsPending" id="LI16" class="dropdown-item">
+Pending Transactions
+</a>
+</li>
+<li>
+<a href="/txsInternal" id="LI14" class="dropdown-item">
+Contract Internal Transactions
+</a>
+</li>
+<li>
+<a href="/txsBlobs" id="LI_txsBlobs" class="dropdown-item">
+View Blobs
+</a>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a href="/blocks" id="LI_blocks" class="dropdown-item">
+View Blocks
+</a>
+</li>
+<li>
+<a href="/blocks_forked" id="LI_blocks2" class="dropdown-item">
+Forked Blocks (Reorgs)
+</a>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a href="/accounts" id="LI_accountall" class="dropdown-item">
+Top Accounts
+</a>
+</li>
+<li>
+<a href="/contractsVerified" id="LI_contract_verified" class="dropdown-item">
+Verified Contracts
+</a>
+</li>
+</ul>
+</li>
+
+
+<li class="nav-item dropdown">
+<a href="javascript:;" id="LI_Validators" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Validators</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<a href="/validators" id="LI75" class="dropdown-item">
+Validators Leaderboard
+</a>
+</li>
+<li>
+<a href="/validatorset" id="LI76" class="dropdown-item">
+View Validators Set Info
+</a>
+</li>
+</ul>
+</li>
+
+
+<li class="nav-item dropdown">
+<a href="javascript:;" id="LI_tokens" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tokens</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<a href="/tokens" id="LI21" class="dropdown-item">
+Top Tokens <span class="small text-muted">(BEP-20)</span>
+</a>
+</li>
+<li>
+<a href="/tokentxns" id="LI1" class="dropdown-item">
+Token Transfers <span class="small text-muted">(BEP-20)</span>
+</a>
+</li>
+</ul>
+</li>
+
+
+<li class="nav-item dropdown">
+<a href="javascript:;" id="LI_Nfts" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">NFTs</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<a href="/nft-top-contracts" id="LI63" class="dropdown-item">
+Top NFTs
+</a>
+</li>
+<li>
+<a href="/nft-top-mints" id="LI67" class="dropdown-item">
+Top Mints
+</a>
+</li>
+<li>
+<a href="/nft-trades" id="LI64" class="dropdown-item">
+Latest Trades
+</a>
+</li>
+<li>
+<a href="/nft-transfers" id="LI65" class="dropdown-item">
+Latest Transfers
+</a>
+</li>
+<li>
+<a href="/nft-latest-mints" id="LI66" class="dropdown-item">
+Latest Mints
+</a>
+</li>
+</ul>
+</li>
+
+
+<li class="nav-item dropdown">
+<a href="javascript:;" id="LI_resources" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<a href="/charts" id="LI_charts2" class="dropdown-item">
+Charts &amp; Stats
+</a>
+</li>
+<li>
+<a href="/topstat" id="LI_topstat" class="dropdown-item">
+Top Statistics
+</a>
+</li>
+</ul>
+</li>
+
+
+<li class="nav-item dropdown">
+<a href="#" id="li_developers" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Developers</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<a href="/apis" id="LI5" class="dropdown-item">
+API Plans
+</a>
+</li>
+<li>
+<a href="https://docs.bscscan.com" id="LI6" class="dropdown-item" target="_blank">
+API Documentation
+</a>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a href="/code-reader" id="A1" class="dropdown-item">
+Code Reader <span class="badge border bg-light text-muted">Beta</span>
+</a>
+</li>
+<li>
+<a href="/verifyContract" id="LI17" class="dropdown-item">
+Verify Contract
+</a>
+</li>
+<li>
+<a href="/find-similar-contracts" id="LI55" class="dropdown-item">
+Similar Contract Search
+</a>
+</li>
+<li>
+<a href="/contractdiffchecker" id="LI54" class="dropdown-item">
+Contract Diff Checker
+</a>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a href="/vyper" id="LI27" class="dropdown-item">
+Vyper Online Compiler
+</a>
+</li>
+<li>
+<a href="/opcode-tool" id="LI24" class="dropdown-item">
+Bytecode to Opcode
+</a>
+</li>
+<li>
+<a href="/pushTx" id="LI10" class="dropdown-item">
+Broadcast Transaction
+</a>
+</li>
+</ul>
+</li>
+
+
+<li class="nav-item dropdown position-initial">
+<a href="javascript:;" id="LI_services2" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+<div class="dropdown-menu dropdown-menu-border dropdown-menu-mega">
+<div class="row">
+<div class="col-lg order-last order-lg-first">
+<div class="d-flex flex-column bg-light h-100 rounded-3 p-5">
+<div>
+<h6>Tools &amp; Services</h6>
+<p>Discover more of BscScan's tools and services in one place.</p>
+</div>
+</div>
+</div>
+<div class="col-sm py-5">
+<h6 class="px-3 mb-3">Tools</h6>
+<ul class="list-unstyled">
+<li>
+<a href="/unitconverter" id="LI50" class="dropdown-item">
+<i class="far fa-arrows-rotate dropdown-item-icon fa-fw me-1"></i>Unit Converter
+</a>
+</li>
+<li>
+<a href="/exportData" id="LI51" class="dropdown-item">
+<i class="far fa-download fa-fw me-1"></i>CSV Export
+</a>
+</li>
+<li>
+<a href="/balancecheck-tool" id="LI52" class="dropdown-item">
+<i class="far fa-file-invoice-dollar fa-fw me-1"></i>Account Balance Checker
+</a>
+</li>
+</ul>
+</div>
+<div class="col-sm py-5">
+<h6 class="px-3 mb-3">Explore</h6>
+<ul class="list-unstyled">
+<li>
+<a href="/gastracker" id="LI19" class="dropdown-item">
+<i class="far fa-gas-pump dropdown-item-icon fa-fw me-1"></i>Gas Tracker
+</a>
+</li>
+<li>
+<a href="/nodetracker" id="LI46" class="dropdown-item">
+<i class="far fa-server dropdown-item-icon fa-fw me-1"></i>Node Tracker
+</a>
+</li>
+<li>
+<a href="/labelcloud" id="LI41" class="dropdown-item">
+<i class="far fa-signs-post dropdown-item-icon fa-fw me-1"></i>Label Cloud
+</a>
+</li>
+<li>
+<a href="/name-lookup" id="LI26" class="dropdown-item">
+<i class="far fa-magnifying-glass-chart dropdown-item-icon fa-fw me-1"></i>Domain Name Lookup
+</a>
+</li>
+</ul>
+</div>
+<div class="col-sm py-5">
+<h6 class="px-3 mb-3">Services</h6>
+<ul class="list-unstyled">
+<li>
+<a href="/tokenapprovalchecker" id="LI49" class="dropdown-item">
+<i class="far fa-shield-keyhole dropdown-item-icon fa-fw me-1"></i>Token Approvals <span class="badge border bg-light text-muted">Beta</span>
+</a>
+</li>
+<li>
+<a href="/verifiedSignatures" id="LI29" class="dropdown-item">
+<i class="far fa-signature-lock dropdown-item-icon fa-fw me-1"></i>Verified Signature
+</a>
+</li>
+<li>
+<a href="/advanced-filter" id="LI31" class="dropdown-item">
+<i class="far fa-filters dropdown-item-icon fa-fw me-1"></i>Advanced Filter <span class="badge border bg-light text-muted">Beta</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+
+<li class="nav-item dropdown d-block d-lg-none">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explorers</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li><a class="dropdown-item active" href="https://bscscan.com">Bsc Mainnet</a></li><li><a class="dropdown-item" href="https://opbnb.bscscan.com">opBNB Mainnet</a></li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li><a class="dropdown-item" href="https://testnet.bscscan.com">Bsc Testnet</a></li><li><a class="dropdown-item" href="https://opbnb-testnet.bscscan.com">opBNB Testnet</a></li>
+</ul>
+</li>
+
+<li class="nav-item dropdown d-block d-lg-none">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Appearance &amp; Settings</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<button type="button" class="dropdown-item theme-btn active" data-bs-theme-value="light" onclick="setThemeMode('light');">
+<i class="far fa-sun-bright fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-sun-bright"></i> Light
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item theme-btn" data-bs-theme-value="dim" onclick="setThemeMode('dim');">
+<i class="far fa-moon-stars fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-moon-stars"></i> Dim
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item theme-btn" data-bs-theme-value="dark" onclick="setThemeMode('dark');">
+<i class="far fa-moon-stars fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-moon"></i> Dark
+</button>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a class="dropdown-item" href="/settings">
+<i class="far fa-gear fa-fw dropdown-item-icon me-1"></i> Site Settings <i class="far fa-arrow-right ms-1"></i>
+</a>
+</li>
+</ul>
+</li>
+
+<li class="nav-item align-self-center d-none d-lg-block">
+<span class="text-secondary">|</span>
+</li>
+<li class="nav-item d-none d-lg-block">
+<a class="nav-link" href="/login">
+<i class="far fa-user-circle me-1"></i> Sign In
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+
+
+<main id="content" class="main-content" role="main">
+<input type="hidden" name="hdnAgeText" id="hdnAgeText" value="Age" />
+<input type="hidden" name="hdnDateTimeText" id="hdnDateTimeText" value="Date Time (UTC)" />
+<input type="hidden" name="hdnAgeTitle" id="hdnAgeTitle" value="Click to show Age Format" />
+<input type="hidden" name="hdnDateTimeTitle" id="hdnDateTimeTitle" value="Click to show Datetime Format" />
+<input type="hidden" name="hdnTxnText" id="hdnTxnText" value="Txn Fee" />
+<input type="hidden" name="hdnGasPriceText" id="hdnGasPriceText" value="Gas Price" />
+<input type="hidden" name="hdnTxnFeeTitle" id="hdnTxnFeeTitle" value="(Gas Price * Gas Used by Txns) in BNB" />
+<input type="hidden" name="hdnGasPriceTitle" id="hdnGasPriceTitle" value="Gas Price in Gwei" />
+<input type="hidden" name="hdnSiteName" id="hdnSiteName" value="bscscan" />
+<input type="hidden" name="hdnSiteEmptyToken" id="hdnSiteEmptyToken" value="/assets/bsc/images/svg/empty-token.svg?v=24.8.2.0" />
+<input type="hidden" name="hdnSiteShortUrl" id="hdnSiteShortUrl" value="bscscan.com" />
+<form method="post" action="./login" id="form1" class="js-validate w-md-75 w-lg-50 mx-md-auto">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="NA5miYgE8+hJdqR5QnOqoCjj+EhQlBABi7qDxNH+xpMe+yJ8X1cUHhwoN06yPQF/c1Gx+EFYXC8pYKPp2lvCyr26Gz4UxEG9yFV3ZjvlY+pLedLSs+7FanbpRPW6rd7c11JoVVgoWfsHZSDW4vv8RS9RNIIa2NVbjTL0Dx+wj574MBJDiEJXRS7anWEDcL/f" />
+<section class="container-xxl py-12 pt-sm-20 pb-sm-32">
+
+<div id="ContentPlaceHolder1_divLogin" class="col-sm-10 col-md-7 col-lg-5 col-xl-4 card mx-auto p-6">
+<div class="text-center mb-5">
+<h1 class="h4">
+Sign In
+</h1>
+<p class="text-muted mb-0">
+Don't have an account? <a href="/register">Sign Up</a>
+</p>
+</div>
+<div class="js-form-message form-group mb-4">
+<label class="form-label" for="txtUserName">Username</label>
+<input name="ctl00$ContentPlaceHolder1$txtUserName" type="text" maxlength="50" id="ContentPlaceHolder1_txtUserName" tabindex="1" class="form-control form-control-lg py-3" placeholder="e.g. johndoe" required data-msg-required="Please enter your Username." data-error-class="u-has-error" data-success-class="u-has-success" />
+</div>
+<div class="js-form-message form-group mb-4">
+<div class="d-flex justify-content-between">
+<label class="form-label" for="txtPassword">
+Password
+</label>
+<a class="link-muted" href="/lostpassword" tabindex="0">Forgot your password?</a>
+</div>
+<div class="form-group position-relative">
+<input name="ctl00$ContentPlaceHolder1$txtPassword" type="password" maxlength="75" id="ContentPlaceHolder1_txtPassword" tabindex="2" required data-hs-toggle-password-options="{ &quot;target&quot;: &quot;#changePassTarget&quot;, &quot;defaultClass&quot;: &quot;far fa-eye-slash&quot;, &quot;showClass&quot;: &quot;far fa-eye&quot;, &quot;classChangeTarget&quot;: &quot;#changePassIcon&quot; }" placeholder="*************" class="js-toggle-password form-control form-control-lg py-3" data-success-class="u-has-success" data-error-class="u-has-error" data-msg="Your password is invalid. Please try again." data-msg-required="Please enter your Password." style="padding-right: 3rem;" />
+<span class="content-center position-absolute top-0 py-1.5" title="Password Toggle" style="right: 0.5rem;">
+<button type="button" class="btn btn-sm btn-ghost-white" id="changePassTarget" tabindex="-1" style="width: 2.375rem; height: 2.375rem;">
+<i id="changePassIcon" class="far fa-eye"></i>
+</button>
+</span>
+</div>
+</div>
+<div class="js-form-message form-check mb-4">
+<input name="ctl00$ContentPlaceHolder1$chkRemember" type="checkbox" id="ContentPlaceHolder1_chkRemember" class="form-check-input" />
+<label class="form-check-label" for="ContentPlaceHolder1_chkRemember" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Please do not check this box if you are using a public or shared PC">
+<span>Remember & Auto Login
+</span>
+</label>
+</div>
+<div class="d-flex justify-content-center my-5">
+<div id="ContentPlaceHolder1_captchaDiv">
+<div class="cf-turnstile" data-sitekey="0x4AAAAAAAEa2HrAMtBfbE-5" data-theme="auto"></div>
+</div>
+</div>
+<input type="submit" name="ctl00$ContentPlaceHolder1$btnLogin" value="LOGIN" id="ContentPlaceHolder1_btnLogin" type="submit" class="btn btn-lg btn-primary w-100 py-3" />
+</div>
+
+
+
+<script src="https://js.stripe.com/v3/"></script>
+<script type="text/javascript">
+                const getSetup = async () => {
+                    return $.ajax({
+                        type: 'GET',
+                        url: '/s_checkout.aspx/setup',
+                        data: '{}',
+                        contentType: "application/json",
+                        dataType: "json",
+                        async: false
+                    });
+                }
+
+                async function checkoutStripe(planSessioId) {
+                    var setupResponse = await getSetup();
+                    var stripe = Stripe(setupResponse.d.PublishableKey);
+                    await stripe.redirectToCheckout({
+                        sessionId: planSessioId
+                    });
+                }
+            </script>
+</section>
+</form>
+</main>
+<div id="push" style="display: none;"></div>
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="emailSubscribeModalBox" aria-hidden="true">
+<div class="modal-dialog modal-sm" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<button type="button" class="close close-md" data-bs-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+<div class="text-center py-5-alt px-4">
+<div id="emailSubscribeModalBoxText"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="copyAddressConfirmModal" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-md">
+<div class="modal-content">
+<div class="modal-header border-0">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body pt-0">
+<div class="mb-5">
+<div class="text-center">
+<div class="mb-2">
+<i class="fas fa-exclamation-triangle text-warning fs-2"></i>
+</div>
+<h6 class="modal-title fs-5 mb-0">Before You Copy</h6>
+</div>
+<div class="mb-3 text-center">
+<p class="text-muted small" id="addressToCopy"></p>
+</div>
+<p id="copyAddressConfirmMessage"></p>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" value id="popupDontShowAgain">
+<label class="form-check-label" for="popupDontShowAgain">Don't show this for 30 days</label>
+</div>
+</div>
+<div class="text-center">
+<button type="button" id="btnConfirmCopyAddress" data-clipboard-target="#addressToCopy" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">
+Understand, Copy Address
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id="masterFooter" class="bg-light mt-auto d-print-none">
+<div class="container-xxl">
+<div class="d-flex justify-content-between align-items-baseline py-6">
+
+<div class="d-flex gap-2">
+<a class="link-dark" href="https://twitter.com/bscscan" rel="nofollow noopener" target="_blank">
+<i class="fab fa-x-twitter me-0.5"></i> (Twitter)
+</a>
+</div>
+
+<a class="link-dark" href="#">
+<i class="far fa-arrow-up-to-line me-1"></i>Back to Top
+</a>
+</div>
+<hr class="my-0">
+
+<div class="row justify-content-md-between py-8 py-lg-10">
+<div class="col-lg-4 pe-xl-16 mb-4 mb-lg-0">
+<div class="d-flex align-items-center mb-3">
+<img class="me-2" width="28" data-img-theme="light" src="/assets/bsc/images/svg/logos/chain-light.svg?v=24.8.2.0" alt="BNB Smart Chain Logo">
+<img class="me-2" width="28" data-img-theme="dim" src="/assets/bsc/images/svg/logos/chain-dim.svg?v=24.8.2.0" alt="BNB Smart Chain Logo">
+<img class="me-2" width="28" data-img-theme="dark" src="/assets/bsc/images/svg/logos/chain-dark.svg?v=24.8.2.0" alt="BNB Smart Chain Logo">
+<span class="fs-5">Powered by BNB Beacon Chain</span>
+</div>
+<p class="fs-sm">BscScan is a Block Explorer and Analytics Platform for BNB Smart Chain.</p>
+<button type="button" class="btn btn-sm btn-secondary" onclick="addNetwork('web3');">
+<img class="me-1" width="18" src="/images/svg/brands/metamask.svg" alt="Metamask"> Add BSC Network
+</button>
+</div>
+<div class="col-6 col-md-4 col-lg mb-10 mb-md-0">
+<h4 class="h6 mb-3">Company</h4>
+
+<ul class="list-unstyled list-sm-space fs-sm mb-0">
+<li>
+<a class="link-dark" href="/delegate">
+<span class="me-1">Delegate to BscScan</span> <span class="bg-primary text-white small fw-medium text-nowrap rounded-pill p-1 px-2">Staking</span>
+</a>
+</li>
+<li><a class="link-dark" href="/brandassets">Brand Assets</a></li>
+<li><a class="link-dark" href="/contactus">Contact Us</a></li>
+<li><a class="link-dark" href="/terms">Terms</a> & <a class="link-dark" href="/privacyPolicy">Privacy</a></li>
+<li><a class="link-dark" href="https://etherscan.io/bugbounty" target="_blank">Bug Bounty</a> <i class="far fa-arrow-up-right-from-square text-muted ms-1"></i></li>
+</ul>
+
+</div>
+<div class="col-6 col-md-4 col-lg mb-10 mb-md-0">
+<h4 class="h6 mb-3">Community</h4>
+
+<ul class="list-unstyled list-sm-space fs-sm mb-0">
+<li><a class="link-dark" href="https://docs.bscscan.com" target="_blank">API Documentation</a></li>
+<li><a class="link-dark" href="https://info.bscscan.com/">Knowledge Base</a></li>
+<li><a class="link-dark" href="https://bscscan.freshstatus.io" rel="nofollow noopener" target="_blank">Network Status</a></li>
+<li><a class="link-dark" href="https://www.binance.org/en/smartChain" target="_blank">Learn BSC <i class="far fa-arrow-up-right-from-square text-muted ms-1"></i></a></li>
+</ul>
+
+</div>
+<div class="col-12 col-md-4 col-lg">
+<h4 class="h6 mb-3">Products &amp; Services</h4>
+
+<ul class="list-unstyled list-sm-space fs-sm mb-0">
+<li><a class="link-dark" href="https://etherscan.io/contactusadvertise?type=56">Advertise <i class="far fa-arrow-up-right-from-square text-muted ms-1"></i></a></li>
+<li><a class="link-dark" href="https://etherscan.io/eaas" target="_blank">Explorer-as-a-Service (EaaS) <i class="far fa-arrow-up-right-from-square text-muted ms-1"></i></a></li>
+<li><a class="link-dark" href="/apis">API Plans</a></li>
+<li><a class="link-dark" href="/priority-support">Priority Support</a></li>
+<li><a class="link-dark" href="https://blockscan.com" target="_blank">Blockscan <i class="far fa-arrow-up-right-from-square text-muted ms-1"></i></a></li>
+</ul>
+
+</div>
+</div>
+
+
+<div class="border-top py-4">
+<div class="row justify-content-between align-items-center fs-sm">
+<div class="col-md mb-2 mb-md-0">
+<p class="mb-0">
+BscScan © 2024 (BSC-C)
+<span class="mx-1">|</span>
+⛏ Built by Team <a href="https://etherscan.io" target="_blank"><strong>Etherscan</strong><i class="far fa-arrow-up-right-from-square text-muted ms-1"></i></a>
+</p>
+</div>
+<div class="col-md text-md-end">
+<p class="mb-0">
+Donations: <a class="me-1" href="/address/0x71c7656ec7ab88b098defb751b7401b5f6d8976f"><span id="spanDonateAddress" runat="server">0x71c765...d8976f</span></a> <i class="fas fa-heart text-danger"></i>
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</footer>
+
+
+<div id="masterDivCookie">
+<div class="fixed-bottom text-center" id="divcookie" style="display: none;">
+<div class="alert alert-light fade show border shadow-sm d-inline-flex flex-wrap flex-sm-nowrap align-items-sm-center text-start gap-3 mx-3" role="alert">
+<p class="text-dark mb-0">
+<i class="far fa-cookie-bite text-muted"></i> This website <a href="/terms#cookiestatement" target="_blank">uses cookies to improve your experience</a>. By continuing to use this website, you agree to its <a href="/terms" target="_blank">Terms</a> and <a href="/privacyPolicy" target="_blank">Privacy Policy</a>.
+</p>
+<button id="btnCookie" type="button" class="btn btn-primary text-nowrap px-4" data-bs-dismiss="alert" aria-label="Close">Got it!</button>
+</div>
+</div>
+</div>
+
+<script src="/assets/vendor/jquery-ui/jquery-ui.min.js?v=24.8.2.0"></script>
+<script src="/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js?v=24.8.2.0"></script>
+<script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js?v=24.8.2.0"></script>
+
+<script src="/assets/vendor/cubeportfolio/js/jquery.cubeportfolio.min.js?v=24.8.2.0"></script>
+<script src="/assets/vendor/clipboard/dist/clipboard.min.js?v=24.8.2.0"></script>
+
+<script src="/assets/js/hs.core.js?v=24.8.2.0"></script>
+<script src="/assets/js/components/hs.cubeportfolio.js?v=24.8.2.0"></script>
+<script src="/assets/js/custom/combine-js-bottom2.js?v=24.8.2.0"></script>
+<script src="/assets/vendor/autocomplete/dist/js/autocomplete.min.js?v=24.8.2.0"></script>
+<script src="/assets/js/custom/blockchain-search.js?v=24.8.2.0"></script>
+
+<script src="/assets/js/app.min.js?v=24.8.2.0"></script>
+
+<script>
+        var strSearchBoxSiteToken = 'BEP';
+
+        (function () {
+            // INITIALIZATION OF CLIPBOARD
+            HSCore.components.HSClipboard.init('.js-clipboard');
+
+            let searchAttributes = {
+                'name': 'title',
+                'img': 'img',
+                'rate': 'rate',
+                'address': 'address',
+                'link': 'link',
+                'group': 'group',
+                'groupid': 'groupid',
+                'website': 'website',
+                'is_verified': 'is_checked',
+                'ps': 'ps',
+                'desc': 'desc',
+                'reputation' : 'reputation'
+            }
+
+            blockChainSearchInit({
+                id: 'search-panel',
+                attributes: searchAttributes
+            });
+        })();
+
+
+    </script>
+
+<script>
+        $(window).on('load', function () {
+            myfn_subscribeNewsletter.startFn("#btnSubscribeNewsletter", "#signupSrEmail")
+        });
+
+        $(document).on('ready', function () {
+
+            // Get offset timezone of enduser and set to cookie
+            const date = new Date();
+            const offsetMinutes = date.getTimezoneOffset();
+            const offsetHours = Math.abs(offsetMinutes / 60);
+            const sign = offsetMinutes > 0 ? '-' : '+';
+            offsetHoursFinal = sign + offsetHours;
+            writeCookie(strSiteName + "_offset_datetime", offsetHoursFinal, 365);
+
+            // initialization of cubeportfolio
+            $.HSCore.components.HSCubeportfolio.init('.cbp');
+
+            const clipboard = new ClipboardJS('.js-clipboard');
+            clipboard.on('success', function (e) {
+                let toolTip = bootstrap.Tooltip.getInstance(e.trigger);
+                var oriTooltip = toolTip._config.originalTitle
+
+                toolTip._config.title = 'Copied!';
+                toolTip.setContent();
+                toolTip.update();
+
+                setTimeout(function () {
+                    toolTip._config.title = oriTooltip;
+                }, 1000);
+            });
+        });
+
+    </script>
+<script type="text/javascript">
+        var strSiteName = 'bscscan';
+        var sid = '2e887e88702b32097ebdc4458186223a';
+        var strGlobal = getCookie(strSiteName + "_switch_age_datetime");
+        var strGlobalFee = sessionStorage.getItem("ShowFee");
+        var cookieconsent = getCookie(strSiteName + "_cookieconsent");
+        var ignoreCopyConfirmation = getCopyAddressConfirmationSetting();
+        var colorHyperLink = '#3498db';
+
+
+if (cookieconsent !== "True" && document.getElementById("divcookie")) {
+    document.getElementById("divcookie").style.display = "block";
+};
+
+
+var ace_editor_theme = 'ace/theme/dawn';
+var ace_editor_theme_dim = 'ace/theme/tomorrow_night_blue';
+var ace_editor_theme_dark = 'ace/theme/tomorrow_night';
+
+var chart_linear_gradient = "{ x1: 0, y1: 0, x2: 0, y2: 1 }";
+var chart_stops = "[ [0, Highcharts.getOptions().colors[0]], [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')] ]";
+var chart_tooltip_color = "";
+var chart_point_color = "";
+var chart_series_color = "";
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        $("#btnCookie").click(function () {
+            $("#divcookie").fadeOut("slow", function () {
+                var d = new Date();
+                d.setTime(d.getTime() + (1095 * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = strSiteName + "_cookieconsent=True" + ";" + expires + ";path=/";;
+            });
+        });
+
+        function handleSearchText(data) {
+            searchAddress = false;
+            if ($("search-panel").val() == "") {
+                $("#hdnSearchText").val("");
+                $("#hdnSearchLabel").val("");
+            }
+        }
+
+        function writeCookie(key, value, days) {
+            var date = new Date();
+            days = days || 365;
+            date.setTime(+ date + (days * 86400000));
+            window.document.cookie = key + "=" + value + "; expires=" + date.toGMTString() + "; path=/";
+            return value;
+        }
+
+        function setThemeMode(mode) {
+            writeCookie('displaymode', mode);
+        }
+
+        // Note: this function will be called from where need to init the "Copy Address Confirm Modal".
+        function openCopyAddressConfirmModal(address, message) {
+            $("#addressToCopy").text(address);
+            $("#copyAddressConfirmMessage").text(message);
+
+            const clipboard = new ClipboardJS("#btnConfirmCopyAddress");
+            document.getElementById('copyAddressConfirmModal').addEventListener('hidden.bs.modal', event => {
+                clipboard.destroy();
+            });
+
+            const copyAddressConfirmModal = new bootstrap.Modal('#copyAddressConfirmModal', {
+                backdrop: true
+            })
+            copyAddressConfirmModal.show();
+        }
+
+        function saveCopyAddressConfirmationSetting(ignoreCopyConfirmation) {
+            const copyAddressConfirmationSetting = {
+                ignoreCopyConfirmation: ignoreCopyConfirmation,
+                expiresOn: Date.now() + 1000 * 60 * 60 * 24 * 30
+            };
+            localStorage.setItem(strSiteName + "_copyAddressConfirmationSetting", JSON.stringify(copyAddressConfirmationSetting));
+        }
+
+        function getCopyAddressConfirmationSetting() {
+            try {
+                const settings = localStorage.getItem(strSiteName + "_copyAddressConfirmationSetting");
+                if (settings) {
+                    const copyAddressConfirmationSetting = JSON.parse(settings);
+
+                    return copyAddressConfirmationSetting.ignoreCopyConfirmation && copyAddressConfirmationSetting.expiresOn > Date.now();
+                }
+                else {
+                    return false;
+                }
+            } catch (e) {
+                return false;
+            }
+        }
+    </script>
+<script src="/assets/js/custom/web3.min.js?v=0.5.2.3"></script>
+<script src="/assets/js/custom/web3-utils.min.js"></script>
+<script src="/assets/js/custom/web3-providers-http.min.js"></script>
+<script type="text/javascript">
+    var eth;
+    var isTestnet = 'false';
+    var SiteNetID = '56';
+    var SiteNetChainID = '0x38';
+    var SiteNetName = 'BNB Smart Chain Mainnet';
+    var allowErc1155 = 'True';
+
+        async function addNetwork(type) {
+
+            if (type === 'web3') {
+                if (typeof ethereum !== 'undefined') {
+                    eth = new Web3(ethereum);
+                } else if (typeof web3 !== 'undefined') {
+                    eth = new Web3(web3.givenProvider);
+                } else {
+                    eth = new Web3(ethereum);
+                }
+            }
+
+            if (typeof eth !== 'undefined') {
+                var network = 0;
+                network = await eth.eth.net.getId();
+                netID = network.toString();
+                var params;
+                if (netID == SiteNetID) {
+                      alert("BNB Smart Chain Network has already been added to Metamask.");
+    return;
+} else {
+    params = [{
+        chainId: SiteNetChainID,
+        chainName: 'BNB Smart Chain Mainnet',
+        nativeCurrency: {
+            name: 'BNB',
+            symbol: 'BNB',
+            decimals: 18
+        },
+        rpcUrls: ['https://bsc-dataseed1.binance.org/'],
+        blockExplorerUrls: ['https://bscscan.com']
+}]
+                }
+
+                window.ethereum.request({ method: 'wallet_addEthereumChain', params })
+                    .then(() => console.log('Success'))
+                    .catch((error) => console.log("Error", error.message));
+            } else {
+                alert('Unable to locate a compatible web3 browser!');
+            }
+        }
+    </script>
+<script src="/assets/vendor/jquery-validation/dist/jquery.validate.min.js?v=24.8.2.0"></script>
+<script src="/assets/js/components/hs.validation.js?v=24.8.2.0"></script>
+<script src="/assets/vendor/hs-toggle-password/dist/js/hs-toggle-password.js?v=24.8.2.0"></script>
+<script type="text/javascript" src="/assets/js/custom/commonjs.js?v=24.8.2.0"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $.HSCore.components.HSValidation.init('.js-validate');
+        });
+
+        function onlyNumberKey(evt) {
+            // Only ASCII character in that range allowed
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                return false;
+            return true;
+        }
+    </script>
+
+<script>
+        (function () {
+            // INITIALIZATION OF TOGGLE PASSWORD
+            // =======================================================
+            new HSTogglePassword('.js-toggle-password');
+        })();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8b4ebfac8c6811b8',t:'MTcyMzk1MTAyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

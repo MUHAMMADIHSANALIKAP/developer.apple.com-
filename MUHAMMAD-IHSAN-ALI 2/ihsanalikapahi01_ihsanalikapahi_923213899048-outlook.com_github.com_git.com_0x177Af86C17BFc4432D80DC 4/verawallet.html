@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="icon" type="image/png" href="/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title class="title">VeraWallet - official VRA wallet</title><meta class="title" name="twitter:title" content="VeraWallet - official VRA wallet"><meta class="title" property="og:title" content="VeraWallet - official VRA wallet"><meta class="description" name="description" content=""><meta class="description" name="twitter:description" content=""><meta class="description" name="og:description" content=""><script>var params = new URL(document.location).searchParams;
+        window.VW_USER_C = params.get('c');//VW_USER_C - user's country</script><script src="/js/analytics.helper.js?1723542320349"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-515PH20GXD"></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-515PH20GXD');</script><script>"use strict";function _typeof(t){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}!function(){var t=function(){var t,e,o=[],n=window,r=n;for(;r;){try{if(r.frames.__tcfapiLocator){t=r;break}}catch(t){}if(r===n.top)break;r=r.parent}t||(!function t(){var e=n.document,o=!!n.frames.__tcfapiLocator;if(!o)if(e.body){var r=e.createElement("iframe");r.style.cssText="display:none",r.name="__tcfapiLocator",e.body.appendChild(r)}else setTimeout(t,5);return!o}(),n.__tcfapi=function(){for(var t=arguments.length,n=new Array(t),r=0;r<t;r++)n[r]=arguments[r];if(!n.length)return o;"setGdprApplies"===n[0]?n.length>3&&2===parseInt(n[1],10)&&"boolean"==typeof n[3]&&(e=n[3],"function"==typeof n[2]&&n[2]("set",!0)):"ping"===n[0]?"function"==typeof n[2]&&n[2]({gdprApplies:e,cmpLoaded:!1,cmpStatus:"stub"}):o.push(n)},n.addEventListener("message",(function(t){var e="string"==typeof t.data,o={};if(e)try{o=JSON.parse(t.data)}catch(t){}else o=t.data;var n="object"===_typeof(o)&&null!==o?o.__tcfapiCall:null;n&&window.__tcfapi(n.command,n.version,(function(o,r){var a={__tcfapiReturn:{returnValue:o,success:r,callId:n.callId}};t&&t.source&&t.source.postMessage&&t.source.postMessage(e?JSON.stringify(a):a,"*")}),n.parameter)}),!1))};"undefined"!=typeof module?module.exports=t:t()}();</script><script>window._sp_queue = [];
+        window._sp_ = {
+            config: {
+                accountId: window.__vera.analytics.ACCOUNT_ID,
+                baseEndpoint: 'https://cdn.privacy-mgmt.com',
+                gdpr: { },
+                events: {
+                    onConsentReady: function () {
+                        try {
+                            const data = localStorage.getItem("_sp_user_consent_" + window.__vera.analytics.USER_ID);
+                            const obj = JSON.parse(data);
+
+                            const consentedVendors = obj?.gdpr?.customVendorsResponse?.consentedVendors || [];
+                            if (consentedVendors.find(({ _id }) => _id === window.__vera.SP.GA_VENDOR_ID)) {
+                                window.__vera.SP.allowGACb();
+                            }
+                            if (consentedVendors.find(({ _id }) => _id === window.__vera.SP.HJ_VENDOR_ID)) {
+                                window.__vera.SP.allowHJCb();
+                            }
+                        } catch (e) {}
+                    },
+                }
+            }
+        }</script><script src="https://cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js" async></script><script src="https://www.recaptcha.net/recaptcha/api.js" async defer="defer"></script><link href="/styles/styles.css?54768223be525c8c67e3" rel="stylesheet"><link href="/styles/app.css?54768223be525c8c67e3" rel="stylesheet"></head><body><div id="root"></div><div id="modal-window"></div><script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script><script defer="defer" src="/js/runtime.js?54768223be525c8c67e3"></script><script defer="defer" src="/js/vendors.js?54768223be525c8c67e3"></script><script defer="defer" src="/js/app.js?54768223be525c8c67e3"></script></body></html>
