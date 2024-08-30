@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deploy &amp; Run Proxy Contracts &mdash; Remix - Ethereum IDE 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/fonts.css?v=f233705a" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tokens.css?v=06ee43e3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=82c89fb6" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="/_/static/javascript/readthedocs-doc-embed.js"></script>
+        <script src="_static/js/constants.js?v=50306793"></script>
+        <script src="_static/js/utils.js?v=6e954e76"></script>
+        <script src="_static/js/loaders.js?v=0d402586"></script>
+        <script src="_static/js/initialize.js?v=ccf049ac"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Terminal" href="terminal.html" />
+    <link rel="prev" title="Deploy &amp; Run (part 2)" href="udapp.html" /> 
+
+<!-- RTD Extra Head -->
+
+<link rel="stylesheet" href="/_/static/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": false, "api_host": "https://readthedocs.org", "builder": "sphinx", "canonical_url": null, "docroot": "/docs/", "features": {"docsearch_disabled": false}, "global_analytics_code": "UA-17997319-1", "language": "en", "page": "run_proxy_contracts", "programming_language": "js", "project": "remix-ide", "proxied_api_host": "/_", "source_suffix": ".md", "subprojects": {}, "theme": "sphinx_rtd_theme", "user_analytics_code": "", "version": "latest"}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+<script type="text/javascript" src="/_/static/javascript/readthedocs-analytics.js" async="async"></script>
+
+<!-- end RTD <extrahead> -->
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="layout.html">Navigating Remix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Using Remix Safely</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remix_tutorials_learneth.html">Tutorials in Remix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="locations.html">Remix URLs &amp; Links with Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Core Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="file_explorer.html">File Explorer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="search_in_fe.html">Search in Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin_manager.html">Plugin Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solidity_editor.html">Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run.html">Deploy &amp; Run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="udapp.html">Deploy &amp; Run (part 2)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Deploy &amp; Run Proxy Contracts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#deploying">Deploying</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upgrading">Upgrading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remixd.html">Remixd: Access your Local Filesystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Solidity modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="compile.html">Solidity Compiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ai.html">AI Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugger.html">Debugger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="static_analysis.html">Solidity Analyzers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit Testing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="unittesting.html">Unit Testing Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unittestingAsCLI.html">Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assert_library.html">Remix Assert Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unittesting_examples.html">Testing by Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing_using_Chai_%26_Mocha.html">Testing using Chai &amp; Mocha</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">External Tool Integrations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hardhat.html">Hardhat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="truffle.html">Truffle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slither.html">Slither</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foundry.html">Foundry</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="create_deploy.html">Creating and Deploying a Contract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_debug.html">Debugging Transactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import.html">Importing &amp; Loading Source Files in Solidity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contract_verification.html">Contract Verification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_js_scripts.html">Running Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAS.html">Frequently Asked Scripts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contract_metadata.html">Compilation Artifacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remix_commands.html">Remix Commands</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plugin_list.html">Plugin List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vyper.html">Vyper Compiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remix_as_code_viewer.html">Remix as code viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_contribution_guide.html">Code Contribution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community.html">Community Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Remix - Ethereum IDE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Deploy &amp; Run Proxy Contracts</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ethereum/remix-ide/blob/master/docs/run_proxy_contracts.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="deploy-run-proxy-contracts">
+<h1>Deploy &amp; Run Proxy Contracts<a class="headerlink" href="#deploy-run-proxy-contracts" title="Link to this heading"></a></h1>
+<p>Remix IDE has the functionality to assist in the handling of proxy contracts that use the UUPS pattern.</p>
+<p>A UUPS proxy contract is the implementation side of an <a class="reference external" href="https://eips.ethereum.org/EIPS/eip-1967">ERC1967Proxy</a>.</p>
+<p>Once you have deployed a UUPS implementation contract, Remix will deploy an ERC1967 with your implementation contract’s address.</p>
+<p>To interact with the functions in the <strong>implementation contract</strong>, use the deployed instance of the <strong>ERC1967 instance</strong> not on the implementation contract.</p>
+<p>When it’s time to upgrade your contract, Remix has a UI for this.</p>
+<p>To try this out, you will need to get a proxy contract. Go to wizard.openzeppelin.com and select a contract. Then, in the Upgradeability section, check the UUPS option. Then, copy and paste the file into Remix.  Compile the file and go to Deploy &amp; Run.</p>
+<section id="deploying">
+<h2>Deploying<a class="headerlink" href="#deploying" title="Link to this heading"></a></h2>
+<p>When a UUPS contract is selected in Deploy &amp; Run’s Contract select box, you’ll see some checkboxes below the Deploy button:</p>
+<p><img alt="" src="_images/a-proxy-deploy1-noParams.png" /></p>
+<p>Check the box for <strong>Deploy with Proxy</strong>. This will create two transactions: one for the implementation (your contract) and the other for the ERC1967 proxy contract. You will get two modals to check through:</p>
+<p><img alt="" src="_images/a-proxy-modal1.png" /></p>
+<p>and then</p>
+<p><img alt="" src="_images/a-proxy-modal2.png" /></p>
+<p>If you are deploying to the <strong>Remix VM</strong>, these modals will appear one after the other. If you are connected to the mainnet or a public testnet, then the second modal will appear after the first transaction has gone through.</p>
+<p>After the ERC1967 proxy contract is deployed, in the Deployed Contracts section, you’ll see two deployed instances.</p>
+<p><img alt="" src="_images/a-deployed-instances.png" /></p>
+<p>To interact with your implementation contract <strong>DO NOT</strong> use the instance of your contract. Instead, you should <strong>use the ERC1967 Proxy</strong>. The proxy will have all the functions of your implementation.</p>
+</section>
+<section id="upgrading">
+<h2>Upgrading<a class="headerlink" href="#upgrading" title="Link to this heading"></a></h2>
+<p>To upgrade, check the Upgrade with Proxy box and dial down the caret to see the options:</p>
+<p><img alt="" src="_images/a-proxy-upgrade.png" /></p>
+<p>You’ll either need to use the last deployed ERC1967 contract, or input the address of the ERC1967 contract that you want to use.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="udapp.html" class="btn btn-neutral float-left" title="Deploy &amp; Run (part 2)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="terminal.html" class="btn btn-neutral float-right" title="Terminal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-24, Remix;.
+      <span class="commit">Revision <code>ccd02f21</code>.
+      </span>
+      <span class="lastupdated">Last updated on Jul 21, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/en/latest/">latest</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+        
+      </dl>
+      <dl>
+        
+        <dt>On Read the Docs</dt>
+          <dd>
+            <a href="//readthedocs.org/projects/remix-ide/?fromdocs=remix-ide">Project Home</a>
+          </dd>
+          <dd>
+            <a href="//readthedocs.org/builds/remix-ide/?fromdocs=remix-ide">Builds</a>
+          </dd>
+      </dl>
+    </div>
+  </div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1010 @@
+
+
+<!doctype html>
+<html id="html" lang="en">
+<head><title>
+	TESTNET  Sepolia (ETH) Blockchain Explorer
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><meta name="author" content="etherscan.io" /><meta name="Description" content="Etherscan allows you to explore and search the Sepolia blockchain for transactions, addresses, tokens, prices and other activities taking place on Sepolia (ETH)" /><meta name="keywords" content="ethereum, explorer, ether, search, blockchain, crypto, currency" /><meta name="format-detection" content="telephone=no" />
+<meta property="og:title" content="TESTNET  Sepolia (ETH) Blockchain Explorer" /> <meta property="og:description" content="Etherscan allows you to explore and search the Sepolia blockchain for transactions, addresses, tokens, prices and other activities taking place on Sepolia (ETH)" /> <meta property="og:type" content="website" /> <meta property="og:site_name" content="Ethereum (ETH) Blockchain Explorer" /> <meta property="og:url" content="https://sepolia.etherscan.io/" /> <meta property="og:image" content="https://etherscan.io/images/brandassets/og.jpg" /> <meta property="og:image:alt" content="Visit Etherscan.io" /> <meta name="twitter:card" content="summary_large_image" /> <meta name="twitter:title" content="TESTNET  Sepolia (ETH) Blockchain Explorer" /> <meta property="twitter:description" content="Etherscan allows you to explore and search the Sepolia blockchain for transactions, addresses, tokens, prices and other activities taking place on Sepolia (ETH)" /> <meta name="twitter:site" content="@etherscan" /> <meta property="twitter:image" content="https://etherscan.io/images/brandassets/og.jpg" /> <meta name="twitter:image:alt" content="Visit Etherscan.io" />
+<link rel="shortcut icon" href="/images/favicon3.ico" />
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config','', { 'anonymize_ip': true });
+    </script>
+<script>
+        //Search box text ad
+        var availableAd = [];
+        var gotAd = [];
+
+        
+    </script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/all.min.css?v=24.8.3.0">
+<link rel="stylesheet" href="/assets/vendor/autocomplete/dist/css/autocomplete.min.css?v=24.8.3.0" />
+<link rel="stylesheet" href="/assets/css/theme.min.css?v=24.8.3.0">
+<link rel="stylesheet" href="/assets/css/custom.css?v=24.8.3.0">
+<script src="/assets/vendor/jquery/dist/jquery.min.js?v=24.8.3.0"></script>
+<script type="text/javascript" src="/jss/blockies.js?v=24.8.3.0"></script>
+<script type="text/javascript" src="/assets/js/theme-appearance.js?v=24.8.3.0"></script>
+<style>
+        .autolink-safari a {
+            pointer-events: none !important;
+            text-decoration: none !important;
+            color: inherit !important;
+        }
+
+        #masterNoticeBar div.alert a{
+            color:#fff !important; 
+            text-decoration: underline !important;
+        }
+
+    </style>
+<style> .d3qeewuty83 { -ms-flex-pack: center; justify-content: center; } .adqndvaci4i { border-top: 1px solid #e7eaf3 !important; } body.dark-mode .adqndvaci4i { border-color: #18365b !important; } @media (min-width: 992px) { .bpyyp18efu1 { display: block !important; } } @media (min-width: 992px) { .ckvg42g7l7t { display: inline-block !important; } }  </style>
+<style>
+        .wrapper {
+            background-color: #fff !important;
+        }
+
+        [data-bs-theme="light"],
+        [data-bs-theme=auto] {
+            --bg-img-wave: url(./assets/svg/patterns/waves.svg);
+        }
+
+        [data-bs-theme="dark"],
+        [data-bs-theme="dim"] {
+            --bg-img-wave: url(./assets/svg/patterns/waves-light.svg);
+        }
+
+        #cardSpinnerWrapper {
+            background: none;
+            color: #666666;
+            opacity: 1;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 160px;
+            z-index: 5000;
+            display: none;
+        }
+
+        #mainOverlay {
+            color: #666666;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            float: left;
+            text-align: center;
+            padding-top: 20%;
+            display: none;
+        }
+
+        @media (max-width: 767.98px) {
+            .card-header-title > .hash-tag {
+                max-width: 7rem !important;
+            }
+        }
+    </style>
+</head>
+<body id="body" class="d-flex flex-column min-vh-100">
+<section id="masterNoticeBar">
+
+
+</section>
+
+<section id="masterTopBar" class="d-none d-lg-block sticky-top bg-white border-bottom py-1">
+<div class="container-xxl d-flex align-items-center justify-content-between">
+<div id="ethPrice" class="d-flex align-items-sm-center gap-4 w-100 fs-sm">
+<span class="badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium p-2">Sepolia Testnet</span>
+</div>
+<div class="d-flex justify-content-end align-items-center gap-2">
+<div id="divThemeSetting" class="dropdown">
+<button class="btn btn-lg btn-white text-primary content-center" type="button" id="dropdownMenuTopbarSettings" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" style="width: 2.375rem; height: 2.375rem;">
+<span class="theme-btn-main"><i class="far fa-sun-bright theme-icon-active" data-href="#fa-sun-bright"></i></span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuTopbarSettings">
+<li>
+<button type="button" class="dropdown-item theme-btn active" data-bs-theme-value="light" onclick="setThemeMode('light');">
+<i class="far fa-sun-bright fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-sun-bright"></i> Light
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item theme-btn" data-bs-theme-value="dim" onclick="setThemeMode('dim');">
+<i class="far fa-moon-stars fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-moon-stars"></i> Dim
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item theme-btn" data-bs-theme-value="dark" onclick="setThemeMode('dark');">
+<i class="far fa-moon fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-moon"></i> Dark
+</button>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a class="dropdown-item" href="/settings">
+<i class="far fa-gear fa-fw dropdown-item-icon me-1"></i> Site Settings <i class="far fa-arrow-right ms-1"></i>
+</a>
+</li>
+</ul>
+</div>
+<div id="divTestNet" class="dropdown">
+<button class="btn btn-lg btn-white content-center" type="button" id="dropdownTopbarNetworks" data-bs-toggle="dropdown" aria-expanded="false" style="width: 2.375rem; height: 2.375rem;">
+<img width="10" data-img-theme="light" src="/images/svg/brands/ethereum-original.svg" alt="Ethereum Logo">
+<img width="10" data-img-theme="darkmode" src="/images/svg/brands/ethereum-original-light.svg" alt="Ethereum Logo">
+</button>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownTopbarNetworks">
+<li>
+<a href="https://etherscan.io" id="LI_testnetMain" class="dropdown-item">
+Ethereum Mainnet
+</a>
+</li>
+<li>
+<a href="https://cn.etherscan.com/?lang=zh-CN" id="LI_testnetMain_CN" class="dropdown-item">Ethereum Mainnet <span class="badge border bg-light text-dark ms-1">CN</span>
+</a>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a href="https://goerli.etherscan.io" id="LI_testnetGoerli" class="dropdown-item" target="_blank">
+Goerli Testnet
+</a>
+</li>
+<li>
+<a href="https://sepolia.etherscan.io" id="LI_testnetsepolia" class="dropdown-item active" target="_blank">
+Sepolia Testnet
+</a>
+</li>
+<li>
+<a href="https://holesky.etherscan.io" id="LI_testnetholesky" class="dropdown-item" target="_blank">
+Holesky Testnet
+</a>
+</li>
+
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a href="http://beaconscan.com/" id="LI45" class="dropdown-item" target="_blank">
+Beacon Chain <span class="badge border bg-light text-dark ms-1">ETH2</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+
+<header id="masterHeader" class="header border-bottom d-print-none">
+<nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0">
+<div class="container-xxl position-relative">
+<a class="navbar-brand" href="/" target="_parent" aria-label="Etherscan">
+<img width="150" data-img-theme="light" src="/assets/svg/logos/logo-etherscan.svg?v=0.0.5" alt="Etherscan Logo">
+<img width="150" data-img-theme="darkmode" src="/assets/svg/logos/logo-etherscan-light.svg?v=0.0.5" alt="Etherscan Logo">
+</a>
+<div class="d-flex align-items-center gap-4">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+</div>
+<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+<ul class="navbar-nav gap-1 gap-lg-0 pt-4 pt-lg-0">
+<li class="nav-item">
+<a href="/" id="LI_default" class="nav-link active" aria-current="page">
+Home
+</a>
+</li>
+
+<li class="nav-item dropdown">
+<a href="javascript:;" id="LI_blockchain" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blockchain</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<a href="/txs" id="LI12" class="dropdown-item">
+Transactions
+</a>
+</li>
+<li>
+<a href="/txsPending" id="LI16" class="dropdown-item">
+Pending Transactions
+</a>
+</li>
+<li>
+<a href="/txsInternal" id="LI14" class="dropdown-item">
+Contract Internal Transactions
+</a>
+</li>
+<li>
+<a href="/txsBeaconWithdrawal" id="LI_BeaconWithdrawals" class="dropdown-item">
+Beacon Withdrawals
+</a>
+</li>
+<li>
+<a href="/txsBlobs" id="LI_txsBlobs" class="dropdown-item">
+View Blobs
+</a>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a href="/blocks" id="LI_blocks" class="dropdown-item">
+View Blocks
+</a>
+</li>
+<li>
+<a href="/blocks_forked" id="LI_blocks2" class="dropdown-item">
+Forked Blocks (Reorgs)
+</a>
+</li>
+<li>
+<a href="/uncles" id="LI8" class="dropdown-item">
+Uncles
+</a>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a href="/accounts" id="LI_accountall" class="dropdown-item">
+Top Accounts
+</a>
+</li>
+<li>
+<a href="/contractsVerified" id="LI_contract_verified" class="dropdown-item">
+Verified Contracts
+</a>
+</li>
+</ul>
+</li>
+
+
+<li class="nav-item dropdown">
+<a href="javascript:;" id="LI73" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tokens</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<a href="/tokentxns" id="LI3" class="dropdown-item">
+View ERC20 Transfers
+</a>
+</li>
+</ul>
+</li>
+
+
+<li class="nav-item dropdown">
+<a href="javascript:;" id="LI70" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">NFTs</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<a href="/nft-transfers" id="LI71" class="dropdown-item">
+Latest Transfers
+</a>
+</li>
+<li>
+<a href="/nft-latest-mints" id="LI72" class="dropdown-item">
+Latest Mints
+</a>
+</li>
+</ul>
+</li>
+
+
+<li class="nav-item dropdown">
+<a href="javascript:;" id="LI74" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Misc</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem; right: 0; left: auto;">
+<li>
+<a href="https://docs.etherscan.io/v/sepolia-etherscan" id="LI57" class="dropdown-item" target="_blank">
+API Documentation
+</a>
+</li>
+<li>
+<a href="/verifyContract" id="LI20" class="dropdown-item">
+Verify Contract
+</a>
+</li>
+<li>
+<hr class="dropdown-divider" />
+</li>
+<li>
+<a href="/opcode-tool" id="LI23" class="dropdown-item">
+Byte to Opcode
+</a>
+</li>
+<li>
+<a href="/pushTx" id="LI15" class="dropdown-item">
+Broadcast TXN
+</a>
+</li>
+<li>
+<a href="/vyper" id="LI7" class="dropdown-item">
+Vyper Online Compiler
+</a>
+</li>
+<li>
+<a href="/find-similar-contracts" id="A3" class="dropdown-item">
+Similar Contract Search
+</a>
+</li>
+<li>
+<a href="/contractdiffchecker" id="A6" class="dropdown-item">
+Contract Diff Checker
+</a>
+</li>
+<li>
+<a href="/exportData" id="A7" class="dropdown-item">
+CSV Export
+</a>
+</li>
+</ul>
+</li>
+
+<li class="nav-item dropdown d-block d-lg-none">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explorers</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<a href="https://etherscan.io" id="LI_testnetMain_1" class="dropdown-item">
+Ethereum Mainnet
+</a>
+</li>
+<li>
+<a href="https://cn.etherscan.com/?lang=zh-CN" id="LI81" class="dropdown-item">Ethereum Mainnet <span class="badge border bg-light text-dark ms-1">CN</span>
+</a>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a href="https://goerli.etherscan.io" id="LI82" class="dropdown-item" target="_blank">
+Goerli Testnet
+</a>
+</li>
+<li>
+<a href="https://sepolia.etherscan.io" id="LI83" class="dropdown-item" target="_blank">
+Sepolia Testnet
+</a>
+</li>
+<li>
+<a href="https://holesky.etherscan.io" id="A5" class="dropdown-item" target="_blank">
+Holesky Testnet
+</a>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a href="https://beacon.etherscan.io" id="LI85" class="dropdown-item" target="_blank">
+Beacon Testnet <span class="badge border bg-light text-dark ms-1">ETH2</span>
+</a>
+</li>
+</ul>
+</li>
+
+<li class="nav-item dropdown d-block d-lg-none">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Appearance &amp; Settings</a>
+<ul class="dropdown-menu dropdown-menu-border" style="min-width: 14rem;">
+<li>
+<button type="button" class="dropdown-item theme-btn active" data-bs-theme-value="light" onclick="setThemeMode('light');">
+<i class="far fa-sun-bright fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-sun-bright"></i> Light
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item theme-btn" data-bs-theme-value="dim" onclick="setThemeMode('dim');">
+<i class="far fa-moon-stars fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-moon-stars"></i> Dim
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item theme-btn" data-bs-theme-value="dark" onclick="setThemeMode('dark');">
+<i class="far fa-moon-stars fa-fw dropdown-item-icon theme-icon me-1" data-href="#fa-moon"></i> Dark
+</button>
+</li>
+<li>
+<hr class="dropdown-divider">
+</li>
+<li>
+<a class="dropdown-item" href="/settings">
+<i class="far fa-gear fa-fw dropdown-item-icon me-1"></i> Site Settings <i class="far fa-arrow-right ms-1"></i>
+</a>
+</li>
+</ul>
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+</header>
+
+
+<main id="content" class="main-content" role="main">
+<input type="hidden" name="hdnAgeText" id="hdnAgeText" value="Age" />
+<input type="hidden" name="hdnDateTimeText" id="hdnDateTimeText" value="Date Time (UTC)" />
+<input type="hidden" name="hdnAgeTitle" id="hdnAgeTitle" value="Click to show Age Format" />
+<input type="hidden" name="hdnDateTimeTitle" id="hdnDateTimeTitle" value="Click to show Datetime Format" />
+<input type="hidden" name="hdnTxnText" id="hdnTxnText" value="Txn Fee" />
+<input type="hidden" name="hdnGasPriceText" id="hdnGasPriceText" value="Gas Price" />
+<input type="hidden" name="hdnTxnFeeTitle" id="hdnTxnFeeTitle" value="(Gas Price * Gas Used by Txns) in Ether" />
+<input type="hidden" name="hdnGasPriceTitle" id="hdnGasPriceTitle" value="Gas Price in Gwei" />
+<div id="mainOverlay" class="bg-white bg-opacity-40"></div>
+<section class="bg-light pt-14 pb-20" style="background-image: var(--bg-img-wave);">
+<div class="container-xxl">
+<div class="row justify-content-between align-items-center">
+<div class="col-md-9 col-lg-7 mb-5">
+<h1 class="fs-lg fw-medium mb-3">
+<i class="fa fa-subway me-1"></i>Sepolia Testnet Explorer
+</h1>
+<form class="mb-3" action="/search" method="GET">
+<div class="search-panel-container bg-white border rounded d-flex gap-2 p-1.5">
+
+<div class="d-none d-sm-block">
+<select name="f" class="form-select fs-base border-0 filterby" aria-label="Default select example">
+<option selected value="0">All Filters</option>
+<option value="1">Addresses</option>
+<option value="2">Tokens</option>
+<option value="3">Name Tags</option>
+<option value="6">Domain Names</option>
+<option value="4">Labels</option>
+<option value="5">Websites</option>
+</select>
+</div>
+
+
+<div class="flex-grow-1 position-relative auto-search-max-height">
+<label for="search-panel" class="visually-hidden">Search</label>
+<input id="search-panel" type="text" class="form-control fs-base border-0 pe-8" autocomplete="off" spellcheck="false" placeholder="Search by Address / Txn Hash / Block / Token" aria-describedby="button-header-search" name="q" onkeyup="handleSearchText(this);" maxlength="68" />
+<a href="javascript:;" class="clear-icon d-none align-items-center position-absolute top-0 bottom-0 my-auto d-flex align-items-center" style="right: 0.75rem; cursor: pointer;">
+<i class="fa-regular fa-xmark fs-5 text-secondary"></i>
+</a>
+<input type="hidden" value id="hdnSearchText" />
+<input type="hidden" value id="hdnSearchLabel" />
+<input id="hdnIsTestNet" value="True" type="hidden" />
+</div>
+<div>
+<button class="btn fs-base btn-primary" type="submit">
+<i class="far fa-magnifying-glass"></i>
+</button>
+</div>
+
+</div>
+</form>
+
+
+</div>
+
+<div class="col-auto mx-auto noindex-section" meta name="robots" content="noindex, nofollow">
+<div class="d-none d-lg-flex justify-content-center mt-n4">
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<section class="container-xxl pb-20 mt-n16">
+
+
+
+
+
+<div class="row gx-4" id="cardsWrapper">
+<div id="cardSpinnerWrapper">
+<div id="cardSpinner" class="text-center py-10 "><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div><div class="small text-muted mt-1">Loading</div></div>
+</div>
+
+<div class="col-lg-6 mb-4">
+<div class="card h-100">
+<div class="card-header d-flex justify-content-between align-items-center">
+<div class="d-flex justify-content-between align-items-center gap-1">
+<h2 class="card-header-title">
+Latest Blocks
+</h2>
+<button type="button" id="card1AdvancedFilterListButton" class="btn btn-sm btn-ghost-white d-none" data-bs-toggle="modal" data-bs-target="#advancedFilterListModal" data-bs-card-index="1">
+<i class="far fa-pen-to-square fa-fw"></i>
+</button>
+</div>
+</div>
+<div class="card-body overflow-auto scrollbar-custom " style="max-height: 30.3rem;" id="mCSB_1_container">
+<div class="row"><div class="col-sm-4"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-cube fs-lg"></i></div><div class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">Block</span><a class="text-truncate" style="max-width: 6rem;" href="/block/6522540">6522540</a><div class="small text-muted"> 4 secs ago</div></div></div></div><div class="col-sm-8 d-flex justify-content-sm-between align-items-end align-items-sm-center position-relative"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">Fee Recipient <a data-highlight-value href="/address/0xf24a01ae29dec4629dfb4170647c4ed4efc392cd" data-bs-toggle="tooltip" title="0xf24a01ae29dec4629dfb4170647c4ed4efc392cd" class="d-flex align-items-center"><span data-highlight-target="0xf24A01aE29Dec4629DFB4170647C4eD4EFc392cD">0xf24A01aE...4EFc392cD</span></a></div><a href="/txs?block=6522540" data-bs-toggle="tooltip" title="Transactions in this Block">70 txns </a> <span class="small text-muted me-2">in 12 secs</span><span class="d-inline-block d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1 py-sm-1.5 px-1.5 px-sm-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>02146 Eth</span></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1.5 px-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>02146 Eth</span></div></div></div><hr class="mt-3.5 mb-3.5"><div class="row"><div class="col-sm-4"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-cube fs-lg"></i></div><div class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">Block</span><a class="text-truncate" style="max-width: 6rem;" href="/block/6522539">6522539</a><div class="small text-muted"> 16 secs ago</div></div></div></div><div class="col-sm-8 d-flex justify-content-sm-between align-items-end align-items-sm-center position-relative"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">Fee Recipient <a data-highlight-value href="/address/0x455e5aa18469bc6ccef49594645666c587a3a71b" data-bs-toggle="tooltip" title="0x455e5aa18469bc6ccef49594645666c587a3a71b" class="d-flex align-items-center"><span data-highlight-target="0x455E5AA18469bC6ccEF49594645666C587A3a71B">0x455E5AA1...587A3a71B</span></a></div><a href="/txs?block=6522539" data-bs-toggle="tooltip" title="Transactions in this Block">105 txns </a> <span class="small text-muted me-2">in 12 secs</span><span class="d-inline-block d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1 py-sm-1.5 px-1.5 px-sm-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>01988 Eth</span></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1.5 px-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>01988 Eth</span></div></div></div><hr class="mt-3.5 mb-3.5"><div class="row"><div class="col-sm-4"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-cube fs-lg"></i></div><div class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">Block</span><a class="text-truncate" style="max-width: 6rem;" href="/block/6522538">6522538</a><div class="small text-muted"> 28 secs ago</div></div></div></div><div class="col-sm-8 d-flex justify-content-sm-between align-items-end align-items-sm-center position-relative"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">Fee Recipient <a data-highlight-value href="/address/0xf24a01ae29dec4629dfb4170647c4ed4efc392cd" data-bs-toggle="tooltip" title="0xf24a01ae29dec4629dfb4170647c4ed4efc392cd" class="d-flex align-items-center"><span data-highlight-target="0xf24A01aE29Dec4629DFB4170647C4eD4EFc392cD">0xf24A01aE...4EFc392cD</span></a></div><a href="/txs?block=6522538" data-bs-toggle="tooltip" title="Transactions in this Block">104 txns </a> <span class="small text-muted me-2">in 12 secs</span><span class="d-inline-block d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1 py-sm-1.5 px-1.5 px-sm-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>05259 Eth</span></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1.5 px-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>05259 Eth</span></div></div></div><hr class="mt-3.5 mb-3.5"><div class="row"><div class="col-sm-4"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-cube fs-lg"></i></div><div class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">Block</span><a class="text-truncate" style="max-width: 6rem;" href="/block/6522537">6522537</a><div class="small text-muted"> 40 secs ago</div></div></div></div><div class="col-sm-8 d-flex justify-content-sm-between align-items-end align-items-sm-center position-relative"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">Fee Recipient <a data-highlight-value href="/address/0x670b24610df99b1685aeac0dfd5307b92e0cf4d7" data-bs-toggle="tooltip" title="0x670b24610df99b1685aeac0dfd5307b92e0cf4d7" class="d-flex align-items-center"><span data-highlight-target="0x670B24610DF99b1685aEAC0dfD5307B92e0cF4d7">0x670B2461...92e0cF4d7</span></a></div><a href="/txs?block=6522537" data-bs-toggle="tooltip" title="Transactions in this Block">55 txns </a> <span class="small text-muted me-2">in 12 secs</span><span class="d-inline-block d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1 py-sm-1.5 px-1.5 px-sm-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>02072 Eth</span></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1.5 px-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>02072 Eth</span></div></div></div><hr class="mt-3.5 mb-3.5"><div class="row"><div class="col-sm-4"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-cube fs-lg"></i></div><div class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">Block</span><a class="text-truncate" style="max-width: 6rem;" href="/block/6522536">6522536</a><div class="small text-muted"> 52 secs ago</div></div></div></div><div class="col-sm-8 d-flex justify-content-sm-between align-items-end align-items-sm-center position-relative"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">Fee Recipient <a data-highlight-value href="/address/0x008b3b2f992c0e14edaa6e2c662bec549caa8df1" data-bs-toggle="tooltip" title="0x008b3b2f992c0e14edaa6e2c662bec549caa8df1" class="d-flex align-items-center"><span data-highlight-target="0x008b3b2F992C0E14eDaa6E2c662Bec549CAA8df1">0x008b3b2F...49CAA8df1</span></a></div><a href="/txs?block=6522536" data-bs-toggle="tooltip" title="Transactions in this Block">76 txns </a> <span class="small text-muted me-2">in 12 secs</span><span class="d-inline-block d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1 py-sm-1.5 px-1.5 px-sm-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>01852 Eth</span></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1.5 px-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>01852 Eth</span></div></div></div><hr class="mt-3.5 mb-3.5"><div class="row"><div class="col-sm-4"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-cube fs-lg"></i></div><div class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">Block</span><a class="text-truncate" style="max-width: 6rem;" href="/block/6522535">6522535</a><div class="small text-muted"> 1 min ago</div></div></div></div><div class="col-sm-8 d-flex justify-content-sm-between align-items-end align-items-sm-center position-relative"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">Fee Recipient <a data-highlight-value href="/address/0x13cb6ae34a13a0977f4d7101ebc24b87bb23f0d5" data-bs-toggle="tooltip" title="0x13cb6ae34a13a0977f4d7101ebc24b87bb23f0d5" class="d-flex align-items-center"><span data-highlight-target="0x13CB6AE34A13a0977F4d7101eBc24B87Bb23F0d5">0x13CB6AE3...7Bb23F0d5</span></a></div><a href="/txs?block=6522535" data-bs-toggle="tooltip" title="Transactions in this Block">61 txns </a> <span class="small text-muted me-2">in 12 secs</span><span class="d-inline-block d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1 py-sm-1.5 px-1.5 px-sm-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>02132 Eth</span></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark fw-medium py-1.5 px-2" data-bs-toggle="tooltip" title="Block Reward">0<b>.</b>02132 Eth</span></div></div></div>
+</div>
+<a class="card-footer bg-light fw-medium text-cap link-muted text-center" href="/blocks">
+View all blocks<i class="far fa-long-arrow-right ms-1"></i>
+</a>
+</div>
+</div>
+
+
+<div class="col-lg-6 mb-4">
+<div class="card h-100">
+<div class="card-header d-flex justify-content-between align-items-center">
+<div class="d-flex justify-content-between align-items-center gap-1">
+<h2 class="card-header-title">
+Latest Transactions
+</h2>
+<button type="button" id="card2AdvancedFilterListButton" class="btn btn-sm btn-ghost-white d-none" data-bs-toggle="modal" data-bs-target="#advancedFilterListModal" data-bs-card-index="2">
+<i class="far fa-pen-to-square fa-fw"></i>
+</button>
+</div>
+</div>
+<div class="card-body overflow-auto scrollbar-custom " style="max-height: 30.3rem;" id="mCSB_2_container">
+<div class="row"><div class="col-sm-4 col-lg-5"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-memo fs-lg"></i></div><div class="d-flex align-items-center align-items-sm-start flex-row flex-sm-column gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">TX#</span><a class="d-block text-truncate" style="max-width:7rem;" href="/tx/0x2e384327a9a3fbf01cb6b75158fc012b5ee039424d9ca0e59c8646a082220d6b">0x2e384327a9a3fbf01cb6b75158fc012b5ee039424d9ca0e59c8646a082220d6b</a><div class="small text-muted">4 secs ago</div></div></div></div><div class="col-sm-8 col-lg-7 d-flex justify-content-sm-between align-items-end align-items-sm-center"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">From <a data-highlight-value href="/address/0xc6dfdd4ba9bb768be833e578065a7bce4225a9f4" data-bs-toggle="tooltip" title="0xc6dfdd4ba9bb768be833e578065a7bce4225a9f4"><span data-highlight-target="0xc6DFDd4bA9bb768Be833E578065A7Bce4225A9f4">0xc6DFDd4b...e4225A9f4</span></a></div><div class="d-flex align-items-center flex-wrap gap-1">To <a data-highlight-value href="/address/0xd988226e16c30e59150c6ff75e681e5988183cf3" data-bs-toggle="tooltip" title="0xd988226e16c30e59150c6ff75e681e5988183cf3" class="d-flex align-items-center"><span data-highlight-target="0xd988226E16C30e59150c6Ff75e681e5988183cF3">0xd988226E...988183cF3</span></a><span class="d-inline d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark ms-1 py-1.5 px-2 fw-medium">0 Eth</span></div></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0" data-bs-toggle="tooltip" title="Amount"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark  py-1.5 px-2 fw-medium">0 Eth</span></div></div></div><hr class="mt-3.5 mb-3.5"><div class="row"><div class="col-sm-4 col-lg-5"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-memo fs-lg"></i></div><div class="d-flex align-items-center align-items-sm-start flex-row flex-sm-column gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">TX#</span><a class="d-block text-truncate" style="max-width:7rem;" href="/tx/0xe4be637cb99d6bca8f142d58660464183f9096e903e59864f37b213c2c007e55">0xe4be637cb99d6bca8f142d58660464183f9096e903e59864f37b213c2c007e55</a><div class="small text-muted">4 secs ago</div></div></div></div><div class="col-sm-8 col-lg-7 d-flex justify-content-sm-between align-items-end align-items-sm-center"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">From <a data-highlight-value href="/address/0xe173fadf2ce1340f7d199423dc4111012806aa8f" data-bs-toggle="tooltip" title="0xe173fadf2ce1340f7d199423dc4111012806aa8f"><span data-highlight-target="0xe173fAdf2ce1340f7d199423dC4111012806Aa8f">0xe173fAdf...12806Aa8f</span></a></div><div class="d-flex align-items-center flex-wrap gap-1">To <a data-highlight-value href="/address/0xca1140786d67e6c91f4c826356d1494d595a9e07" data-bs-toggle="tooltip" title="0xca1140786d67e6c91f4c826356d1494d595a9e07" class="d-flex align-items-center"><span data-highlight-target="0xCa1140786D67e6c91F4c826356d1494D595A9E07">0xCa114078...D595A9E07</span></a><span class="d-inline d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark ms-1 py-1.5 px-2 fw-medium">0<b>.</b>05 Eth</span></div></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0" data-bs-toggle="tooltip" title="Amount"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark  py-1.5 px-2 fw-medium">0<b>.</b>05 Eth</span></div></div></div><hr class="mt-3.5 mb-3.5"><div class="row"><div class="col-sm-4 col-lg-5"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-memo fs-lg"></i></div><div class="d-flex align-items-center align-items-sm-start flex-row flex-sm-column gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">TX#</span><a class="d-block text-truncate" style="max-width:7rem;" href="/tx/0x247f2c6c9d46cdc08ef8a4af8357b81e6664da892e30b274fd5decb1b6bc06ee">0x247f2c6c9d46cdc08ef8a4af8357b81e6664da892e30b274fd5decb1b6bc06ee</a><div class="small text-muted">4 secs ago</div></div></div></div><div class="col-sm-8 col-lg-7 d-flex justify-content-sm-between align-items-end align-items-sm-center"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">From <a data-highlight-value href="/address/0xb74f7493024ea3fe4370991c2496012f4bcd4127" data-bs-toggle="tooltip" title="0xb74f7493024ea3fe4370991c2496012f4bcd4127"><span data-highlight-target="0xB74F7493024Ea3FE4370991C2496012f4bcd4127">0xB74F7493...f4bcd4127</span></a></div><div class="d-flex align-items-center flex-wrap gap-1">To <a data-highlight-value href="/address/0xffaef09b3cd11d9b20d1a19becca54eec2884766" data-bs-toggle="tooltip" title="0xffaef09b3cd11d9b20d1a19becca54eec2884766" class="d-flex align-items-center"><span data-highlight-target="0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766">0xfFAEF09B...EC2884766</span></a><span class="d-inline d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark ms-1 py-1.5 px-2 fw-medium">0 Eth</span></div></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0" data-bs-toggle="tooltip" title="Amount"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark  py-1.5 px-2 fw-medium">0 Eth</span></div></div></div><hr class="mt-3.5 mb-3.5"><div class="row"><div class="col-sm-4 col-lg-5"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-memo fs-lg"></i></div><div class="d-flex align-items-center align-items-sm-start flex-row flex-sm-column gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">TX#</span><a class="d-block text-truncate" style="max-width:7rem;" href="/tx/0x3fbd954c882a81e3d076c901f7c4942221bc13064c22217ae2a665756f718e26">0x3fbd954c882a81e3d076c901f7c4942221bc13064c22217ae2a665756f718e26</a><div class="small text-muted">4 secs ago</div></div></div></div><div class="col-sm-8 col-lg-7 d-flex justify-content-sm-between align-items-end align-items-sm-center"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">From <a data-highlight-value href="/address/0x4a28e5ec811a13a11f0a0e3f535472fbed0d4fea" data-bs-toggle="tooltip" title="0x4a28e5ec811a13a11f0a0e3f535472fbed0d4fea"><span data-highlight-target="0x4A28E5ec811A13A11f0A0E3F535472FBeD0D4FEA">0x4A28E5ec...BeD0D4FEA</span></a></div><div class="d-flex align-items-center flex-wrap gap-1">To <a data-highlight-value href="/address/0x5ff137d4b0fdcd49dca30c7cf57e578a026d2789" data-bs-toggle="tooltip" title="0x5ff137d4b0fdcd49dca30c7cf57e578a026d2789" class="d-flex align-items-center"><span data-highlight-target="0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789">0x5FF137D4...a026d2789</span></a><span class="d-inline d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark ms-1 py-1.5 px-2 fw-medium">0 Eth</span></div></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0" data-bs-toggle="tooltip" title="Amount"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark  py-1.5 px-2 fw-medium">0 Eth</span></div></div></div><hr class="mt-3.5 mb-3.5"><div class="row"><div class="col-sm-4 col-lg-5"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-memo fs-lg"></i></div><div class="d-flex align-items-center align-items-sm-start flex-row flex-sm-column gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">TX#</span><a class="d-block text-truncate" style="max-width:7rem;" href="/tx/0x6569a6e8ea2334fed075669009dd75a012bf77e818c87928a6614bfe7c0ab8a3">0x6569a6e8ea2334fed075669009dd75a012bf77e818c87928a6614bfe7c0ab8a3</a><div class="small text-muted">4 secs ago</div></div></div></div><div class="col-sm-8 col-lg-7 d-flex justify-content-sm-between align-items-end align-items-sm-center"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">From <a data-highlight-value href="/address/0x20e9695f25413f14e5807b530d0698bd4f155074" data-bs-toggle="tooltip" title="0x20e9695f25413f14e5807b530d0698bd4f155074"><span data-highlight-target="0x20e9695f25413f14e5807b530D0698bd4F155074">0x20e9695f...d4F155074</span></a></div><div class="d-flex align-items-center flex-wrap gap-1">To <a data-highlight-value href="/address/0x5ff137d4b0fdcd49dca30c7cf57e578a026d2789" data-bs-toggle="tooltip" title="0x5ff137d4b0fdcd49dca30c7cf57e578a026d2789" class="d-flex align-items-center"><span data-highlight-target="0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789">0x5FF137D4...a026d2789</span></a><span class="d-inline d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark ms-1 py-1.5 px-2 fw-medium">0 Eth</span></div></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0" data-bs-toggle="tooltip" title="Amount"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark  py-1.5 px-2 fw-medium">0 Eth</span></div></div></div><hr class="mt-3.5 mb-3.5"><div class="row"><div class="col-sm-4 col-lg-5"><div class="d-flex align-items-center gap-2"><div class="d-none d-sm-flex content-center bg-light text-muted rounded p-3" style="height: 3rem; width: 3rem;"><i class="fal fa-memo fs-lg"></i></div><div class="d-flex align-items-center align-items-sm-start flex-row flex-sm-column gap-1 gap-sm-0"><span class="d-inline-block d-sm-none">TX#</span><a class="d-block text-truncate" style="max-width:7rem;" href="/tx/0x0a2d6f06c02fb8d4f0ed712898b4dd272cba0caee20826924a0974623b5fdd46">0x0a2d6f06c02fb8d4f0ed712898b4dd272cba0caee20826924a0974623b5fdd46</a><div class="small text-muted">4 secs ago</div></div></div></div><div class="col-sm-8 col-lg-7 d-flex justify-content-sm-between align-items-end align-items-sm-center"><div class="pe-0 pe-sm-2"><div class="d-flex flex-wrap gap-1">From <a data-highlight-value href="/address/0xab71cfc5c8a89f52b1c0e2ec49f07cc18d380d7d" data-bs-toggle="tooltip" title="0xab71cfc5c8a89f52b1c0e2ec49f07cc18d380d7d"><span data-highlight-target="0xAb71Cfc5c8A89F52B1c0e2ec49f07CC18d380D7D">0xAb71Cfc5...18d380D7D</span></a></div><div class="d-flex align-items-center flex-wrap gap-1">To <a data-highlight-value href="/address/0xaa2c5aca3e65602f24dbf6cae29d58d8afd6f236" data-bs-toggle="tooltip" title="0xaa2c5aca3e65602f24dbf6cae29d58d8afd6f236" class="d-flex align-items-center"><span data-highlight-target="0xaa2c5ACa3E65602F24DBF6cae29d58d8afD6f236">0xaa2c5ACa...8afD6f236</span></a><span class="d-inline d-sm-none badge border border-dark dark:border-white border-opacity-15 text-dark ms-1 py-1.5 px-2 fw-medium">0 Eth</span></div></div><div class="d-none d-sm-block text-end ms-2 ms-sm-0" data-bs-toggle="tooltip" title="Amount"><span class="badge border border-dark dark:border-white border-opacity-15 text-dark  py-1.5 px-2 fw-medium">0 Eth</span></div></div></div>
+</div>
+<a class="card-footer bg-light fw-medium text-cap link-muted text-center" href="/txs">
+View all transactions<i class="far fa-long-arrow-right ms-1"></i>
+</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<div class="modal fade" id="customizeCardModal" tabindex="-1" aria-labelledby="customizeCardLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="customizeCardLabel">Custom Card</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<p>Customize this card by selecting one of the options below.</p>
+<form>
+<div id="ContentPlaceHolder1_divSavedAdvancedFiltersOption">
+<h6 class="text-cap fw-medium mb-2">ADVANCED FILTER</h6>
+<div class="d-flex gap-2 mb-4">
+<div class="position-relative border rounded py-1 px-2" id="checkAdvancedFilterInputWrapper">
+<input class="form-check-input me-1" type="radio" name="checkCustomOption" value="AdvancedFilters" id="checkAdvancedFilter">
+<label class="form-check-label stretched-link" for="checkAdvancedFilter">Saved Filters</label>
+</div>
+</div>
+</div>
+<h6 class="text-cap fw-medium mb-2">PRESET</h6>
+<div class="d-flex flex-wrap gap-2">
+<div class="position-relative border rounded py-1 px-2">
+<input class="form-check-input me-1" type="radio" name="checkCustomOption" value="LatestBlocks" id="checkPresets1">
+<label class="form-check-label stretched-link" for="checkPresets1">Latest Blocks</label>
+</div>
+<div class="position-relative border rounded py-1 px-2">
+<input class="form-check-input me-1" type="radio" name="checkCustomOption" value="LatestTransactions" id="checkPresets2">
+<label class="form-check-label stretched-link" for="checkPresets2">Latest Transactions</label>
+</div>
+<div class="position-relative border rounded py-1 px-2">
+<input class="form-check-input me-1" type="radio" name="checkCustomOption" value="HotContracts" id="checkPresets3">
+<label class="form-check-label stretched-link" for="checkPresets3">Hot Contracts</label>
+</div>
+<div class="position-relative border rounded py-1 px-2">
+<input class="form-check-input me-1" type="radio" name="checkCustomOption" value="TopGuzzlers" id="checkPresets4">
+<label class="form-check-label stretched-link" for="checkPresets4">Top Guzzlers</label>
+</div>
+</div>
+</form>
+</div>
+<div class="modal-footer bg-light">
+<button type="button" class="btn btn-ghost-white" data-bs-dismiss="modal">Close</button>
+<button type="button" id="btnSaveCardType" class="btn btn-primary">Save changes</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" id="advancedFilterListModal" tabindex="-1" aria-labelledby="advancedFilterListModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="advancedFilterListModalLabel">Choose Advanced Filter</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div id="listAdvancedFilter" class="modal-body">
+<div class="position-relative mb-4">
+<span class="d-flex align-items-center position-absolute top-0 bottom-0" title="Search" style="left: 0.75rem;">
+<i class="fa-regular fa-search fs-5 text-secondary"></i>
+</span>
+<input id="txtSearchSavedFilters" class="search form-control form-control-lg bg-light bg-focus-white" type="text" placeholder="Search saved filters" aria-label="Search" style="padding-left: 2.375rem;">
+</div>
+<div id="divSavedAdvancedFiltersResult" class="list d-flex flex-column scrollbar-custom overflow-y-auto gap-1" style="max-height: 25rem;">
+<div id="divSelectedFilters" class="d-none">
+</div>
+<h6 class="text-cap mb-0">Advanced Filter List</h6>
+<div id="divAdvancedFilterList">
+</div>
+</div>
+
+</div>
+<div class="modal-footer bg-light">
+<button type="button" class="btn btn-ghost-white" data-bs-dismiss="modal">Close</button>
+<button type="button" id="btnSaveAdvancedFilterCard" class="btn btn-primary" disabled>Save changes</button>
+</div>
+</div>
+</div>
+</div>
+
+</main>
+<div id="push" style="display: none;"></div>
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="emailSubscribeModalBox" aria-hidden="true">
+<div class="modal-dialog modal-sm" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<button type="button" class="close close-md" data-bs-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+<div class="text-center py-5-alt px-4">
+<div id="emailSubscribeModalBoxText"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="copyAddressConfirmModal" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-md">
+<div class="modal-content">
+<div class="modal-header border-0">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body pt-0">
+<div class="mb-5">
+<div class="text-center">
+<div class="mb-2">
+<i class="fas fa-exclamation-triangle text-warning fs-2"></i>
+</div>
+<h6 class="modal-title fs-5 mb-0">Before You Copy</h6>
+</div>
+<div class="mb-3 text-center">
+<p class="text-muted small" id="addressToCopy"></p>
+</div>
+<p id="copyAddressConfirmMessage"></p>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" value id="popupDontShowAgain">
+<label class="form-check-label" for="popupDontShowAgain">Don't show this for 30 days</label>
+</div>
+</div>
+<div class="text-center">
+<button type="button" id="btnConfirmCopyAddress" data-clipboard-target="#addressToCopy" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">
+Understand, Copy Address
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id="masterFooter" class="bg-light mt-auto d-print-none">
+<div class="container-xxl">
+
+<div class=" py-4">
+<div>
+<div class="d-flex justify-content-between align-items-center">
+<div class="d-flex align-items-center">
+<img class="me-2" width="16" data-img-theme="light" src="/images/svg/brands/ethereum-original.svg" alt="Ethereum Logo">
+<img class="me-2" width="16" data-img-theme="darkmode" src="/images/svg/brands/ethereum-original-light.svg" alt="Ethereum Logo">
+<span class="fs-5">Powered by Ethereum</span>
+</div>
+<div>
+<a class="link-dark" href="#">
+<i class="far fa-arrow-up-to-line me-1"></i>Back to Top
+</a>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="border-top py-4">
+<div class="row justify-content-between align-items-center fs-sm">
+<div class="col-md mb-2 mb-md-0">
+<p class="mb-0">Etherscan © 2024 (Sepolia)</p>
+</div>
+<div class="col-md-auto">
+<div class="d-flex flex-wrap justify-content-md-end gap-2">
+<span>
+<a class="link-dark" href="https://etherscan.io/terms" target="_blank">Terms</a> & <a class="link-dark" href="https://etherscan.io/privacyPolicy" target="_blank">Privacy</a>
+</span>
+<span class="text-secondary d-none d-sm-block">|</span>
+<a class="link-dark" href="https://etherscan.freshstatus.io/" target="_blank">Network Status</a>
+<span class="text-secondary d-none d-sm-block">|</span>
+<p class="mb-0">Donations: <a class="me-1" href="/address/0x71c7656ec7ab88b098defb751b7401b5f6d8976f">0x71c765...d8976f</a> <i class="fas fa-heart text-danger"></i></p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</footer>
+
+
+<div id="masterDivCookie">
+<div class="fixed-bottom text-center" id="divcookie" style="display: none;">
+<div class="alert alert-light fade show border shadow-sm d-inline-flex flex-wrap flex-sm-nowrap align-items-sm-center text-start gap-3 mx-3" role="alert">
+<p class="text-dark mb-0">
+<i class="far fa-cookie-bite text-muted"></i> This website <a href="/terms#cookiestatement" target="_blank">uses cookies to improve your experience</a>. By continuing to use this website, you agree to its <a href="/terms" target="_blank">Terms</a> and <a href="/privacyPolicy" target="_blank">Privacy Policy</a>.
+</p>
+<button id="btnCookie" type="button" class="btn btn-primary text-nowrap px-4" data-bs-dismiss="alert" aria-label="Close">Got it!</button>
+</div>
+</div>
+</div>
+
+<script src="/assets/vendor/jquery-ui/jquery-ui.min.js?v=24.8.3.0"></script>
+<script src="/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js?v=24.8.3.0"></script>
+<script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js?v=24.8.3.0"></script>
+
+<script src="/assets/vendor/cubeportfolio/js/jquery.cubeportfolio.min.js?v=24.8.3.0"></script>
+<script src="/assets/vendor/clipboard/dist/clipboard.min.js?v=24.8.3.0"></script>
+
+<script src="/assets/js/hs.core.js?v=24.8.3.0"></script>
+<script src="/assets/js/components/hs.cubeportfolio.js?v=24.8.3.0"></script>
+<script src="/assets/js/custom/combine-js-bottom2.js?v=24.8.3.0"></script>
+<script src="/assets/vendor/autocomplete/dist/js/autocomplete.min.js?v=24.8.3.0"></script>
+<script src="/assets/js/custom/ether-search.js?v=24.8.3.0"></script>
+
+<script src="/assets/js/app.min.js?v=24.8.3.0"></script>
+
+<script>
+
+        (function () {
+            // INITIALIZATION OF CLIPBOARD
+            HSCore.components.HSClipboard.init('.js-clipboard');
+
+            let searchAttributes = {
+                'name': 'title',
+                'img': 'img',
+                'rate': 'rate',
+                'address': 'address',
+                'link': 'link',
+                'group': 'group',
+                'groupid': 'groupid',
+                'website': 'website',
+                'is_verified': 'is_checked',
+                'ps': 'ps',
+                'desc': 'desc',
+                'reputation' : 'reputation'
+            }
+
+            etherSearchInit({
+                id: 'search-panel',
+                attributes: searchAttributes
+            });
+
+
+        })();
+       
+    </script>
+
+<script>
+        $(window).on('load', function () {
+            myfn_subscribeNewsletter.startFn("#btnSubscribeNewsletter", "#signupSrEmail")
+        });
+
+        $(document).on('ready', function () {
+
+            // Get offset timezone of enduser and set to cookie
+            const date = new Date();
+            const offsetMinutes = date.getTimezoneOffset();
+            const offsetHours = Math.abs(offsetMinutes / 60);
+            const sign = offsetMinutes > 0 ? '-' : '+';
+            offsetHoursFinal = sign + offsetHours;
+            writeCookie("etherscan_offset_datetime", offsetHoursFinal, 365);
+
+            // initialization of cubeportfolio
+            $.HSCore.components.HSCubeportfolio.init('.cbp');
+
+            const clipboard = new ClipboardJS('.js-clipboard');
+            clipboard.on('success', function (e) {
+                let toolTip = bootstrap.Tooltip.getInstance(e.trigger);
+                var oriTooltip = toolTip._config.originalTitle
+               
+                toolTip._config.title = 'Copied!';
+                toolTip.setContent();
+                toolTip.update();
+
+                setTimeout(function () {
+                    toolTip._config.title = oriTooltip;
+                }, 1000);
+            });
+        });
+
+    </script>
+<script type="text/javascript">
+        var sid = 'de9272da8988e60427ea09b4cd087bc7';
+        var strGlobal = getCookie("etherscan_switch_age_datetime");
+        var strGlobalFee = sessionStorage.getItem("ShowFee");
+        var strGlobalSlotEpoch = sessionStorage.getItem("ShowSlotEpoch");
+        var cookieconsent = getCookie("etherscan_cookieconsent");
+        var ignoreCopyConfirmation = getCopyAddressConfirmationSetting();
+        
+        if (cookieconsent !== "True" && document.getElementById("divcookie")) {
+            document.getElementById("divcookie").style.display = "block";
+        };
+          
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        $("#btnCookie").click(function () {
+            $("#divcookie").fadeOut("slow", function () {
+                var d = new Date();
+                d.setTime(d.getTime() + (1095 * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = "etherscan_cookieconsent=True" + ";" + expires + ";path=/";;
+            });
+        });
+
+        function handleSearchText(data) {
+            searchAddress = false;
+            if ($("search-panel").val() == "") {
+                $("#hdnSearchText").val("");
+                $("#hdnSearchLabel").val("");
+            }
+        }
+
+        function writeCookie(key, value, days) {
+            var date = new Date();
+            days = days || 365;
+            date.setTime(+ date + (days * 86400000));
+            window.document.cookie = key + "=" + value + "; expires=" + date.toGMTString() + "; path=/";
+            return value;
+        }
+
+        function setThemeMode(mode) {
+            writeCookie('displaymode', mode);
+        }
+
+        // Note: this function will be called from where need to init the "Copy Address Confirm Modal".
+        function openCopyAddressConfirmModal(address, message) {
+            $("#addressToCopy").text(address);
+            $("#copyAddressConfirmMessage").text(message);
+
+            const clipboard = new ClipboardJS("#btnConfirmCopyAddress");
+            document.getElementById('copyAddressConfirmModal').addEventListener('hidden.bs.modal', event => {
+                clipboard.destroy();
+            });
+
+            const copyAddressConfirmModal = new bootstrap.Modal('#copyAddressConfirmModal', {
+                backdrop: true
+            })
+            copyAddressConfirmModal.show();
+        }
+
+        function saveCopyAddressConfirmationSetting(ignoreCopyConfirmation) {
+            const copyAddressConfirmationSetting = {
+                ignoreCopyConfirmation: ignoreCopyConfirmation,
+                expiresOn: Date.now() + 1000 * 60 * 60 * 24 * 30
+            };
+            localStorage.setItem("copyAddressConfirmationSetting", JSON.stringify(copyAddressConfirmationSetting));
+        }
+
+        function getCopyAddressConfirmationSetting() {
+            try {
+                const settings = localStorage.getItem("copyAddressConfirmationSetting");
+                if (settings) {
+                    const copyAddressConfirmationSetting = JSON.parse(settings);
+
+                    return copyAddressConfirmationSetting.ignoreCopyConfirmation && copyAddressConfirmationSetting.expiresOn > Date.now();
+                }
+                else {
+                    return false;
+                }
+            } catch (e) {
+                return false;
+            }
+        }
+
+    </script>
+<script src="/assets/js/custom/web3.min.js?v=24.8.3.0"></script>
+<script type="text/javascript">
+        var web3ojb;
+        var isTestnet = 'true';
+        var chain = 'Sepolia'
+
+        async function addNetwork(type) {
+            if (isTestnet != 'true') return;
+            if (chain != 'Holesky') return;
+
+            if (type === 'web3') {
+                if (typeof ethereum !== 'undefined') {
+                    web3ojb = new Web3(ethereum);
+                } else if (typeof web3 !== 'undefined') {
+                    web3ojb = new Web3(web3.givenProvider);
+                } else {
+                    web3ojb = new Web3(ethereum);
+                }
+            }
+
+            if (typeof web3ojb !== 'undefined') {
+                var network = 0;
+                network = await web3ojb.eth.net.getId();
+                netID = network.toString();
+                var params;
+                if (isTestnet == 'true') {
+                    if (chain == "Holesky") {
+                        if (netID == "17000") {
+                            alert("Holesky Test Network has already been added to Metamask.");
+                            return;
+                        } else {
+                            params = [{
+                                chainId: '0x4268',
+                                chainName: 'Holesky Test Network',
+                                nativeCurrency: {
+                                    name: 'ETH',
+                                    symbol: 'ETH',
+                                    decimals: 18
+                                },
+                                rpcUrls: ['https://rpc.holesky.ethpandaops.io/'],
+                                blockExplorerUrls: ['https://holesky.etherscan.io/']
+                            }]
+
+                            if (window.ethereum.providers?.length) {
+                                let indexProvider = parent.ethereum.providers.findIndex((provider) => provider.isMetaMask);
+
+                                window.ethereum.providers[indexProvider].request({ method: 'wallet_addEthereumChain', params })
+                                    .then(() => console.log('Success'))
+                                    .catch((error) => console.log("Error", error.message));
+                            } else {
+                                if (window.ethereum.isMetaMask) {
+                                    window.ethereum.request({ method: 'wallet_addEthereumChain', params })
+                                        .then(() => console.log('Success'))
+                                        .catch((error) => console.log("Error", error.message));
+                                } else {
+                                    alert("Please Install Metamask")
+                                }
+                            }
+
+                        }
+                    }
+                } else {
+                    alert('Unable to locate a compatible web3 browser!');
+                }
+            }
+        }
+    </script>
+<script src="/assets/highcharts/v/highcharts.js?v=24.8.3.0"></script>
+<script type="text/javascript">
+        var lang_miner = "Fee Recipient";
+        var lang_mined_by = "Mined by";
+        var lang_block = "Block";
+        var lang_block_reward = "Block Reward";
+        var lang_sec = "sec";
+        var lang_secs = "secs";
+        var lang_min = "min";
+        var lang_mins = "mins";
+        var lang_from = "From";
+        var lang_to = "To";
+        var lang_amount = "Amount";
+        var lang_tx = "Tx";
+        var lang_bk = "Bk";
+        var lang_ether = "Eth";
+        var lang_txns = "txns";
+        var lang_in_X = "in";
+        var lang_ago = "ago";
+        var lang_secs_ago = "less than 1 sec ago";
+        var lang_sec_ago = "sec ago";
+        var lang_sec_in = "";
+    </script>
+<script type="text/javascript">
+
+        function setFocus() {
+            if (window.innerWidth > 600)
+                $("input[name=q]").focus();
+        }
+        $(document).ready(function () {
+            //setFocus();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8b4ff928d84273cb',t:'MTcyMzk2Mzg2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
