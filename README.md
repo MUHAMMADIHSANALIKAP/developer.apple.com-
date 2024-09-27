@@ -1,1 +1,0 @@
-https://apps.apple.com/pk/app/jazz-drive/id1447485728/+923213899048/
