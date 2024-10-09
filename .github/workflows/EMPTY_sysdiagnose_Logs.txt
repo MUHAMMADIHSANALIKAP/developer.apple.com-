@@ -1,0 +1,1 @@
+Diagnostic Extension [com.apple.DiagnosticExtensions.sysdiagnose] ran on [iMac18,1 - IMAC’s iMac] with build [22G504] on [15 December 2023 at 3:00:19 AM GMT+5] and returned no files.
